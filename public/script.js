@@ -1,5 +1,5 @@
 class Book {
-    constructor(title, firstName, lastName, year, genre, language, format, completion, rating, cover) {
+    constructor(title, firstName, lastName, year, genre, language, format, status, completion, rating, cover) {
         this.title = title;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -7,6 +7,7 @@ class Book {
         this.genre = genre;
         this.language = language;
         this.format = format;
+        this.status = status;
         this.completion = completion;
         this.rating = rating;
         this.cover = cover;
