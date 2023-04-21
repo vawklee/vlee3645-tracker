@@ -23,3 +23,6 @@ btn = document.getElementById('button');
 btn.addEventListener("click", function() {
     console.log('button has been clicked');
 });
+
+//updates the # items header based on the length of the books array
+document.getElementById('numItems').textContent = `${bookList.length}`;
