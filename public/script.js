@@ -25,17 +25,24 @@ class Book {
 var bookArray = [];
 
 // var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
+// pushing test book to the array for display
 bookArray.push(new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2'));
 
+// just checking that button click listener is working
 var btn = document.getElementById('button');
 btn.addEventListener("click", function() {
     console.log('button has been clicked');
 });
 
+// changing <p> to display the contents of the bookArray ???
 var bookDisplay = document.getElementById('bookList');
-bookDisplay.textContent = `${bookArray[0]}`;
+bookDisplay.textContent = `Book Array: ${bookArray[0]}`;
 console.log(bookArray[0]);
 console.log(bookArray[0].title);
 
 //updates the # items header based on the length of the books array
-document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
+if (bookArray.length == 1) {
+    document.getElementById('numItems').textContent = `There is ${bookArray.length} item being tracked`;
+} else {
+    document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
+}
