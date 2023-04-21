@@ -22,14 +22,20 @@ class Book {
     }
 }
 
-var bookList = [];
+var bookArray = [];
 
-// var textbook = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
+// var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
+bookArray.push(new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2'));
 
-btn = document.getElementById('button');
+var btn = document.getElementById('button');
 btn.addEventListener("click", function() {
     console.log('button has been clicked');
 });
 
+var bookDisplay = document.getElementById('bookList');
+bookDisplay.textContent = `${bookArray[0]}`;
+console.log(bookArray[0]);
+console.log(bookArray[0].title);
+
 //updates the # items header based on the length of the books array
-document.getElementById('numItems').textContent = `${bookList.length}`;
+document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
