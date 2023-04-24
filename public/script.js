@@ -1,22 +1,19 @@
 class Book {
-    constructor(title, firstName, lastName, year, genre, language, format, status, rating) {
+    constructor(title, name, year, genre, language, format, status) {
         this.title = title;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.name = name;
         this.year = year;
         this.genre = genre;
         this.language = language;
         this.format = format;
         this.status = status;
-        this.rating = rating;
         // cover image is provided based on the genre of the book entered
-        // this.cover = cover;
         // ID and Date are not provided by the user
-        this.id = Date.now();
         this.date = new Date().toISOString();
+        this.id = Date.now();
     }
 
-    getInformation() {
+    displayInformation() {
         console.log(this.title);
         console.log(this.status);
     }
@@ -26,7 +23,7 @@ var bookArray = [];
 
 // var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
 // pushing test book to the array for display
-bookArray.push(new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2'));
+bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
 
 // just checking that button click listener is working
 var btn = document.getElementById('button');
