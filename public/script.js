@@ -24,6 +24,7 @@ var bookArray = [];
 // var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
 // pushing test book to the array for display
 bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
+bookArray.push(new Book('Eyre', 'Bronte', '1800', 'Classics', 'English', 'Hardback', 'Planning to read'));
 
 // just checking that button click listener is working
 var btn = document.getElementById('button');
@@ -37,11 +38,9 @@ bookDisplay.textContent = `Book Array: ${bookArray[0]}`;
 console.log(bookArray[0]);
 console.log(bookArray[0].title);
 
-//updates the # items header based on the length of the books array
+// updates the # items button text (sidebar) based on the amount of books in the book array
 if (bookArray.length == 1) {
-    // document.getElementById('numItems').textContent = `There is ${bookArray.length} item being tracked`;
     document.getElementById('numItems').textContent = `${bookArray.length} item`;
 } else {
-    // document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
     document.getElementById('numItems').textContent = `${bookArray.length} items`;
 }
