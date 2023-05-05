@@ -39,7 +39,9 @@ console.log(bookArray[0].title);
 
 //updates the # items header based on the length of the books array
 if (bookArray.length == 1) {
-    document.getElementById('numItems').textContent = `There is ${bookArray.length} item being tracked`;
+    // document.getElementById('numItems').textContent = `There is ${bookArray.length} item being tracked`;
+    document.getElementById('numItems').textContent = `${bookArray.length} item`;
 } else {
-    document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
+    // document.getElementById('numItems').textContent = `There are ${bookArray.length} items being tracked`;
+    document.getElementById('numItems').textContent = `${bookArray.length} items`;
 }
