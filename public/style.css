@@ -1,5 +1,7 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #3F0808;
+    background-color: #FCF8F4;
 }
 
 header {
@@ -9,4 +11,14 @@ header {
     /* z-index: 1; /* Stay on top */
     /* top: 0; /* Stay at the top */
     left: 0;
+    background-color: #743B3B;
+}
+
+header > h1 {
+    color: #FCF8F4;
+}
+
+header > button {
+    font-size: larger;
+    font-weight: bolder;
 }

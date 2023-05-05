@@ -23,8 +23,9 @@ var bookArray = [];
 
 // var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
 // pushing test book to the array for display
-bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
-bookArray.push(new Book('Eyre', 'Bronte', '1800', 'Classics', 'English', 'Hardback', 'Planning to read'));
+
+// bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
+// bookArray.push(new Book('Eyre', 'Bronte', '1800', 'Classics', 'English', 'Hardback', 'Planning to read'));
 
 // just checking that button click listener is working
 var btn = document.getElementById('button');
