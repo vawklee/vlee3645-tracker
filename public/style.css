@@ -4,6 +4,13 @@ body {
     background-color: #FCF8F4;
 }
 
+/* changes size of the logo, WHY IS IT NOT PROPORTIONAL TO THE IMAGE */
+#logoSidebar {
+    display: inline-block;
+    width: 35%;
+    height: 8%;
+}
+
 /* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
 #sidebar {
     height: 100%;
@@ -41,4 +48,20 @@ body {
 
 #sidebar #addTab {
     background-color: #BD4E4E; /* changes colour for the unfocused tab */
+}
+
+/* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
+.main {
+    margin-left: 250px; /* same dimensions as the sidebar, allows content to be seen essentially*/
+    padding: 0px 25px;
+}
+
+@media screen and (max-width: 750px) {
+    #sidebar {
+        height: 50px;
+        width: 100%;
+        overflow-y: hidden;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
 }
