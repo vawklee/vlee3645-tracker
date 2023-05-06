@@ -63,36 +63,31 @@ body {
     }
 
     #sidebar {
-        height: 250px;
+        height: 135px;
         width: 100%;
         overflow-y: hidden;
         padding-top: 15px;
         padding-left: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     #sidebar h1 {
-        top: 0;
-        left: 0;
-        padding-top: 15px;
+        padding-top: 0px;
         padding-bottom: 0px;
+        margin: 50px;
     }
     
+    /* tabs are just floating in the middle, not what I was going for */
     #sidebar a {
-        font-size: 35px;
+        font-size: 25px;
         font-weight: bolder;
         text-decoration: none;
         background-color: #FCF8F4;
-        padding: 0px 0px 0px 0px; /* top right bottom left */
+        padding: 15px 25px 15px 25px; /* top right bottom left */
         border-radius: 10px 10px 0px 0px; /* top-left top-right bottom-right bottom-left */
         margin-left: 0px;
-        display: inline;
-    }
-    
-    #sidebar a:hover, a:visited, a:active {
-        color: inherit; /* stops the link colour from changing when clicked */
-    }
-    
-    #sidebar #addTab {
-        background-color: #BD4E4E; /* changes colour for the unfocused tab */
+        align-items: flex-end;
     }
 }
