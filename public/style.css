@@ -4,42 +4,21 @@ body {
     background-color: #FCF8F4;
 }
 
-/* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
-#sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
+header {
+    /* height: 100%; /* 100% Full-height */
+    /* width: 0; /* 0 width - change this with JavaScript */
+    /* position: fixed; /* Stay in place */
+    /* z-index: 1; /* Stay on top */
+    /* top: 0; /* Stay at the top */
     left: 0;
-    z-index: 1; /* stays on top */
     background-color: #743B3B;
-    overflow-x: hidden;
-    padding-top: 20px;
-    padding-left: 20px;
 }
 
-#sidebar h1 {
+header > h1 {
     color: #FCF8F4;
-    padding-top: 25px;
-    padding-bottom: 75px;
 }
 
-#sidebar a {
-    font-size: 35px;
+header > button {
+    font-size: larger;
     font-weight: bolder;
-    text-decoration: none;
-    background-color: #FCF8F4;
-    padding: 25px 10px 25px 40px; /* top right bottom left */
-    border-radius: 15px 0px 0px 15px; /* top-left top-right bottom-right bottom-left */
-    margin-left: 15px;
-    display: block;
 }
-
-#sidebar a:hover, a:visited, a:active {
-    color: inherit; /* stops the link colour from changing when clicked */
-}
-
-#sidebar #addTab {
-    background-color: #BD4E4E; /* changes colour for the unfocused tab */
-}
-
