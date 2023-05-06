@@ -90,4 +90,10 @@ body {
         margin-left: 0px;
         align-items: flex-end;
     }
+
+    .main {
+        margin-left: 0px;
+        margin-top: 135px; /* same dimensions as the sidebar, allows content to be seen essentially*/
+        padding: 20px 20px;
+    }
 }
