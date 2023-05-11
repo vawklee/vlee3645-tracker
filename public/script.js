@@ -9,7 +9,7 @@ class Book {
         this.status = status;
         // cover image is provided based on the genre of the book entered
         // ID and Date are not provided by the user
-        this.date = new Date().toISOString();
+        this.date = new Date().toDateString();
         this.id = Date.now(); // way of making ID is not perfect
     }
 
@@ -35,7 +35,7 @@ btn.addEventListener("click", function() {
 
 // changing <p> to display the contents of the bookArray ???
 var bookDisplay = document.getElementById('bookList');
-bookDisplay.textContent = `Book Array: ${bookArray[0]}`;
+// bookDisplay.textContent = `Book Array: ${bookArray[0]}`;
 // console.log(bookArray[0]);
 // console.log(bookArray[0].title);
 
@@ -52,6 +52,16 @@ bookArray.forEach(element => {
     console.log(element.id);
 
     let item = document.createElement('li');
-    item.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.name}</p>`;
+    let thumbnail = new Image(250, 250);
+    // not yet determined by genre, dimensions TBD
+    thumbnail.src = './images/logo_book.png';
+
+    item.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.name}<br>Date added: ${element.date}</p>`;
+
+    let delButton = document.createElement('button');
+    delButton.textContent = 'Delete';
+
+    item.appendChild(thumbnail);
+    item.appendChild(delButton);
     bookDisplay.appendChild(item);
 });

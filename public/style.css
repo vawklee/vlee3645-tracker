@@ -56,6 +56,18 @@ body {
     padding: 0px 25px;
 }
 
+#bookList li {
+    list-style-type: none;
+    background-color: #EBD9C7;
+    padding: 10px 10px;
+    margin: 10px;
+    display: flex;
+}
+
+#bookList li button {
+    margin: 25px;
+}
+
 @media screen and (max-width: 750px) {
     #logoSidebar {
         width: auto;
