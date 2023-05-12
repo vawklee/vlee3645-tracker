@@ -4,14 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="" />
-        <title>BookMarker</title>
+        <title>bookMarker</title>
         <link rel="stylesheet" href="style.css">
-        <!-- <link rel="icon" href="favicon.png"> -->
+        <link rel="icon" href="./images/icon_bookmark.png">
     </head>
     <body>
         <div id="sidebar">
             <img src="./images/logo_book.png" id="logoSidebar"> 
             <h1>bookMarker</h1>
+            <!-- default value is 0 items rather than leaving the whole line blank -->
             <a href="" id="numItems">0 items</a>
             <a href="" id="addTab">Add Book</a>
         </div>
@@ -30,13 +31,81 @@
                 <label for="year">Publication year</label>
                 <input type="number" name="year" id="year"><br>
 
-                <label>Genre</label>
+                <!-- an atrociously long list of genres to provide a variety of options for the user, sourced from https://reference.yourdictionary.com/books-literature/different-types-of-books.html -->
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre">
+                    <!-- split into option groups for better categorisation between Fiction and Non-fiction -->
+                    <optgroup label="FICTION">
+                        <option value="action">Action</option>
+                        <option value="adventure">Adventure</option>
+                        <option value="anthology">Anthology</option>
+                        <option value="altHistory">Alternate history</option>
+                        <option value="chickLit">Chick lit</option>
+                        <option value="childrens">Children's</option>
+                        <option value="classic">Classic</option>
+                        <option value="comic">Comic book</option>
+                        <option value="comingOfAge">Coming of age</option>
+                        <option value="crime">Crime</option>
+                        <option value="drama">Drama</option>
+                        <option value="fairytale">Fairytale</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="graphic">Graphic novel</option>
+                        <option value="historicalFiction">Historical fiction</option>
+                        <option value="horror">Horror</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="paranormalRomance">Paranormal romance</option>
+                        <option value="picture">Picture book</option>
+                        <option value="poetry">Poetry</option>
+                        <option value="politicalThriller">Political thriller</option>
+                        <option value="romance">Romance</option>
+                        <option value="satire">Satire</option>
+                        <option value="scifi">Science fiction</option>
+                        <option value="shortStory">Short story</option>
+                        <option value="suspense">Suspence</option>
+                        <option value="thriller">Thriller</option>
+                        <option value="western">Western</option>
+                        <option value="youngAdult">Young adult</option>
+                    </optgroup>
+                    <optgroup label="NON-FICTION">
+                        <option value="art">Art</option>
+                        <option value="architecture">Architecture</option>
+                        <option value="autobiography">Autobiography</option>
+                        <option value="biography">Biography</option>
+                        <option value="business">Business</option>
+                        <option value="crafts">Crafts</option>
+                        <option value="cookbook">Cookbook</option>
+                        <option value="economics">Economics</option>
+                        <option value="fitness">Fitness</option>
+                        <option value="diary">Diary</option>
+                        <option value="dictionary">Dictionary</option>
+                        <option value="encyclopedia">Encyclopedia</option>
+                        <option value="guide">Guide</option>
+                        <option value="health">Health</option>
+                        <option value="history">History</option>
+                        <option value="hobbies">Hobbies</option>
+                        <option value="homeGarden">Home and Garden</option>
+                        <option value="humor">Humor</option>
+                        <option value="journal">Journal</option>
+                        <option value="math">Mathematics</option>
+                        <option value="memoir">Memoir</option>
+                        <option value="philosophy">Philosophy</option>
+                        <option value="prayer">Prayer</option>
+                        <option value="religion">Religion, spirituality & new age</option>
+                        <option value="review">Review</option>
+                        <option value="science">Science</option>
+                        <option value="selfHelp">Self help</option>
+                        <option value="sportsLeisure">Sports and leisure</option>
+                        <option value="textbook">Textbook</option>
+                        <option value="trueCrime">True crime</option>
+                        <option value="travel">Travel</option>
+                    </optgroup>
+                </select><br>
 
-                <label>Language</label>
+                <label for="language">Language</label>
 
-                <label>Format</label>
+                <label for="format">Format</label>
 
-                <label>Status</label>
+                <label for="status">Status</label>
             </form>
         </div>
 

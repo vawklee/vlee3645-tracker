@@ -21,17 +21,14 @@ class Book {
 
 var bookArray = [];
 
-// var novel = new Book('jane eyre', 'Charlotte', 'Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read', '2');
-// pushing test book to the array for display
-
 bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
 bookArray.push(new Book('House of Leaves', 'Mark Z. Danielewski', '2000', 'Fiction', 'English', 'Hardback', 'Reading'));
 
 // just checking that button click listener is working
-var btn = document.getElementById('button');
-btn.addEventListener("click", function() {
-    console.log('button has been clicked');
-});
+// var btn = document.getElementById('button');
+// btn.addEventListener("click", function() {
+//     console.log('button has been clicked');
+// });
 
 // changing <p> to display the contents of the bookArray ???
 var bookDisplay = document.getElementById('bookList');
@@ -45,6 +42,7 @@ if (bookArray.length == 1) {
 } else {
     document.getElementById('numItems').textContent = `${bookArray.length} items`;
 }
+console.log(bookArray);
 
 bookArray.forEach(element => {
     console.log(element.author);
