@@ -1,7 +1,7 @@
 class Book {
-    constructor(title, name, year, genre, language, format, status) {
+    constructor(title, author, year, genre, language, format, status) {
         this.title = title;
-        this.name = name;
+        this.author = author;
         this.year = year;
         this.genre = genre;
         this.language = language;
@@ -47,7 +47,7 @@ if (bookArray.length == 1) {
 }
 
 bookArray.forEach(element => {
-    console.log(element.name);
+    console.log(element.author);
     console.log(element.year);
     console.log(element.id);
 
@@ -56,7 +56,7 @@ bookArray.forEach(element => {
     // not yet determined by genre, dimensions TBD
     thumbnail.src = './images/logo_book.png';
 
-    item.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.name}<br>Date added: ${element.date}</p>`;
+    item.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.author}<br>Date added: ${element.date}</p>`;
 
     let delButton = document.createElement('button');
     delButton.textContent = 'Delete';

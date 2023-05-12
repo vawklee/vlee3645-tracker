@@ -51,7 +51,7 @@ body {
 }
 
 /* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
-.main {
+.main, .form {
     margin-left: 250px; /* same dimensions as the sidebar, allows content to be seen essentially*/
     padding: 0px 25px;
 }
