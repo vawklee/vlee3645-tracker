@@ -57,11 +57,14 @@ body {
 }
 
 form {
-    /* font-size: larger; */
+    font-size: larger;
 }
 
 form input, form select {
     margin-top: 15px;
+    /* WORK IN PROGRESS */
+    padding: 10px 10px;
+    background-color: #EBD9C7;
 }
 
 /* for each item in the list, it becomes a rectangle section */
