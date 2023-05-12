@@ -8,6 +8,10 @@ Packages, npm install: Parcel
 - default empty state: notification to get users to add books
 - change sidebar widths and heights to vw and vh, more responsive ?
 
+## Method of approach
+1. Worked on creating basic HTML layout
+2. 
+
 ## Testing
 ### Browsers used for testing and viewing
 - Google Chrome
@@ -18,6 +22,8 @@ Packages, npm install: Parcel
 Laptop screen: 1920 x 1080
 PC screen: 3840 x 2160
 Mobile screen: TBC
+
+## User testing (optional)
 
 ## Things to improve
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre

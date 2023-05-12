@@ -50,7 +50,7 @@ bookArray.forEach(element => {
     console.log(element.id);
 
     let item = document.createElement('li');
-    let thumbnail = new Image(250, 250);
+    let thumbnail = new Image();
     // not yet determined by genre, dimensions TBD
     thumbnail.src = './images/logo_book.png';
 

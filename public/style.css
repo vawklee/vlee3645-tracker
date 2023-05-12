@@ -56,6 +56,7 @@ body {
     padding: 0px 25px;
 }
 
+/* for each item in the list, it becomes a rectangle section */
 #bookList li {
     list-style-type: none;
     background-color: #EBD9C7;
@@ -103,9 +104,13 @@ body {
         align-items: flex-end;
     }
 
-    .main {
+    .main, .form {
         margin-left: 0px;
         margin-top: 135px; /* same dimensions as the sidebar, allows content to be seen essentially*/
         padding: 20px 20px;
+    }
+
+    .form {
+        margin-top: 15px;
     }
 }
