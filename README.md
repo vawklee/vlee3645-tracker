@@ -6,7 +6,9 @@ Packages, npm install: Parcel
 
 ## To-Do [Delete later]
 - default empty state: notification to get users to add books
-- change sidebar widths and heights to vw and vh, more responsive ?
+- change sidebar widths and heights to vw and vh, more responsive
+- dropshadow for items
+- floating action button for showing the form
 
 ## Method of approach
 1. Worked on creating basic HTML layout
