@@ -32,6 +32,8 @@ Mobile screen: TBC
 
 ## Reference List (APA 7th)
 
+Dynamic Language. (2020, September 11). _Dynamic Language provides professional translation and localization Services_. https://www.dynamiclanguage.com/list-of-languages/
+
 _How To Create a Fixed Sidebar_. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 
 MSEd, M. M. (2022). List of Book Types or Genres. In _YourDictionary_. https://reference.yourdictionary.com/books-literature/different-types-of-books.html
