@@ -64,7 +64,7 @@ form input, form select {
     margin-top: 15px;
     /* WORK IN PROGRESS */
     padding: 10px 10px;
-    background-color: #EBD9C7;
+    /* background-color: #EBD9C7; */
 }
 
 /* for each item in the list, it becomes a rectangle section */
@@ -73,7 +73,7 @@ form input, form select {
     background-color: #EBD9C7;
     padding: 10px 10px;
     margin: 10px;
-    filter: drop-shadow(5px 5px 2px #997245);
+    filter: drop-shadow(0px 3px 2px #997245);
     display: flex;
 }
 
