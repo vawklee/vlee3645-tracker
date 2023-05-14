@@ -68,7 +68,7 @@ form input, form select {
 }
 
 /* for each item in the list, it becomes a rectangle section */
-#bookList li {
+#bookList div {
     list-style-type: none;
     background-color: #EBD9C7;
     padding: 10px 10px;

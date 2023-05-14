@@ -49,18 +49,20 @@ bookArray.forEach(element => {
     console.log(element.year);
     console.log(element.id);
 
-    let item = document.createElement('li');
+    let item = document.createElement('div');
     let thumbnail = new Image(150, 150);
     // image does not show up
     // not yet determined by genre, dimensions TBD
-    thumbnail.src = './images/logo_book.png';
+    thumbnail.src = './images/icon_bookmark.png';
+    let information = document.createElement('p');
 
-    item.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.author}<br>Date added: ${element.date}</p>`;
+    information.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.author}<br>Date added: ${element.date}</p>`;
 
     let delButton = document.createElement('button');
     delButton.textContent = 'Delete';
 
     item.appendChild(thumbnail);
+    item.appendChild(information);
     item.appendChild(delButton);
     bookDisplay.appendChild(item);
 });
