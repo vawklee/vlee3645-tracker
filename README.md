@@ -33,7 +33,7 @@ Packages, npm install: Parcel
 
 ## Reference List (APA 7th)
 
-*OLD REFERENCE* Dynamic Language. (2020, September 11). _Dynamic Language provides professional translation and localization Services_. https://www.dynamiclanguage.com/list-of-languages/
+Harms, N. (2022). Top 10 Book Formats All Writers Should Know. _Become a Writer Today_. https://becomeawritertoday.com/book-formats/
 
 _How To Create a Fixed Sidebar_. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 

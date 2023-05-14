@@ -61,7 +61,7 @@ form {
 }
 
 form input, form select {
-    margin-top: 15px;
+    margin: 10px 0px;
     /* WORK IN PROGRESS */
     padding: 10px 10px;
     /* background-color: #EBD9C7; */
