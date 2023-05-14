@@ -2,9 +2,8 @@
 DECO2017 Assignment 3
 * I logged in on the wrong account at one point, sorry.
 
-Packages, npm install: Parcel
-
 ## To-Do [Delete later]
+- thumbnail images are not showing up
 - default empty state: notification to get users to add books
 - change sidebar widths and heights to vw and vh, more responsive
 - dropshadow for items
@@ -12,7 +11,8 @@ Packages, npm install: Parcel
 
 ## Method of approach
 1. Worked on creating basic HTML layout
-2. 
+2. Added CSS gradually to new elements created in HTML
+3. Added JS for the elements bit by bit
 
 ## Testing
 ### Browsers used for testing and viewing
