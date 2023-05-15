@@ -1,9 +1,9 @@
 # vlee3645-tracker
-DECO2017 Assignment 3
-* I logged in on the wrong account at one point, sorry.
+DECO2017 Assignment 3 - Media Consumption (Books) Tracker
+*I logged in on the wrong account at one point, sorry.*
 
 ## To-Do [Delete later]
-- thumbnail images are not showing up
+- thumbnail images are showing up, but now how to get multiple of them working
 - default empty state: notification to get users to add books
 - change sidebar widths and heights to vw and vh, more responsive
 - dropshadow for items
