@@ -15,6 +15,12 @@ DECO2017 Assignment 3
 2. Added CSS gradually to new elements created in HTML
 3. Added JS for the elements bit by bit
 
+### Creating the pop-up form
+1. Wrote out the HTML for all the form elements
+2. General CSS for spacing of input boxes
+3. Scripted the 'Add book' and 'Cancel' buttons
+4. Currently solving issues with having the form show up and disappear
+
 ## Testing
 ### Browsers used for testing and viewing
 - Google Chrome
