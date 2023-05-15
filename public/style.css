@@ -66,7 +66,7 @@ form {
     font-size: larger;
 }
 
-form input, form select {
+form input, form select, #closeBookButton {
     margin: 10px 0px;
     /* WORK IN PROGRESS */
     padding: 10px 10px;
@@ -92,7 +92,7 @@ form input, form select {
 .openForm:hover {
     transform: scale(1.1);
 }
-/*
+
 .form {
     display: none;
     position: fixed;
@@ -109,8 +109,8 @@ form input, form select {
 }
 
 .formContainer .closeForm {
-    background-color: red;
-} */
+    background-color: #BD4E4E;
+}
 
 /* for each item in the list, it becomes a rectangle section */
 #bookList div {
@@ -120,6 +120,14 @@ form input, form select {
     margin: 10px;
     filter: drop-shadow(0px 3px 2px #997245);
     display: flex;
+}
+
+#bookList div img {
+    margin: 10px 10px;
+}
+
+#bookList div p {
+    margin: 5px 0px 5px 5px;
 }
 
 #bookList div button {

@@ -65,13 +65,17 @@ bookArray.forEach(element => {
 });
 
 // displays the form after the 'add book' button is clicked
-var openButton = document.getElementsByClassName('openForm');
+// var openButton = document.getElementsByClassName('openForm');
+var openButton = document.getElementById('addBookButton');
 openButton.addEventListener('click', function() {
+    console.log('opening form')
     document.getElementById('bookForm').style.display = "block";
 })
 
 // displays the form after the 'cancel' button is clicked 
-var closeButton = document.getElementsByClassName('closeForm');
+// var closeButton = document.getElementsByClassName('closeForm');
+var closeButton = document.getElementById('closeBookButton');
 closeButton.addEventListener('click', function() {
+    console.log('closing form')
     document.getElementById('bookForm').style.display = "none";
 })
