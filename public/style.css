@@ -51,7 +51,7 @@ body {
 }
 
 /* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
-.main, .form {
+main, .form {
     margin-left: 250px; /* same dimensions as the sidebar, allows content to be seen essentially*/
     padding: 0px 25px;
 }
@@ -67,6 +67,45 @@ form input, form select {
     /* background-color: #EBD9C7; */
 }
 
+/* SOURCE: How To Create a Popup Form With CSS. (n.d.). https://www.w3schools.com/howto/howto_js_popup_form.asp */
+/* button used to open the form to add a book, position is fixed to the bottom right of the page */
+.openForm {
+    background-color: #BD4E4E;
+    filter: drop-shadow(0px 3px 2px #997245);
+    color:#FCF8F4;
+    font-weight: bold;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 23px;
+    right: 28px;
+}
+
+/* visual cue for interactivity when cursor hovers over the button */
+.openForm:hover {
+    transform: scale(1.1);
+}
+/*
+.form {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid red;
+    z-index: 9;
+}
+
+.formContainer {
+    max-width: 300px;
+    padding: 10px;
+    background-color: blue;
+}
+
+.formContainer .closeForm {
+    background-color: red;
+} */
+
 /* for each item in the list, it becomes a rectangle section */
 #bookList div {
     list-style-type: none;
@@ -77,7 +116,7 @@ form input, form select {
     display: flex;
 }
 
-#bookList li button {
+#bookList div button {
     width: 50px;
     height: 50px;
     margin: 25px;
@@ -118,7 +157,7 @@ form input, form select {
         align-items: flex-end;
     }
 
-    .main, .form {
+    main, .form {
         margin-left: 0px;
         margin-top: 135px; /* same dimensions as the sidebar, allows content to be seen essentially*/
         padding: 20px 20px;

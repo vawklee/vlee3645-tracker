@@ -1,3 +1,5 @@
+import logoImage from './images/icon_bookmark.png';
+
 class Book {
     constructor(title, author, year, genre, language, format, status) {
         this.title = title;
@@ -24,12 +26,6 @@ var bookArray = [];
 bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
 bookArray.push(new Book('House of Leaves', 'Mark Z. Danielewski', '2000', 'Fiction', 'English', 'Hardback', 'Reading'));
 
-// just checking that button click listener is working
-// var btn = document.getElementById('button');
-// btn.addEventListener("click", function() {
-//     console.log('button has been clicked');
-// });
-
 // changing <p> to display the contents of the bookArray ???
 var bookDisplay = document.getElementById('bookList');
 // bookDisplay.textContent = `Book Array: ${bookArray[0]}`;
@@ -53,7 +49,8 @@ bookArray.forEach(element => {
     let thumbnail = new Image(150, 150);
     // image does not show up
     // not yet determined by genre, dimensions TBD
-    thumbnail.src = './images/icon_bookmark.png';
+    // thumbnail.src = './images/icon_bookmark.png';
+    thumbnail.src = logoImage;
     let information = document.createElement('p');
 
     information.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.author}<br>Date added: ${element.date}</p>`;
@@ -66,3 +63,15 @@ bookArray.forEach(element => {
     item.appendChild(delButton);
     bookDisplay.appendChild(item);
 });
+
+// displays the form after the 'add book' button is clicked
+var openButton = document.getElementsByClassName('openForm');
+openButton.addEventListener('click', function() {
+    document.getElementById('bookForm').style.display = "block";
+})
+
+// displays the form after the 'cancel' button is clicked 
+var closeButton = document.getElementsByClassName('closeForm');
+closeButton.addEventListener('click', function() {
+    document.getElementById('bookForm').style.display = "none";
+})

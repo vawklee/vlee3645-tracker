@@ -16,11 +16,11 @@
             <a href="" id="numItems">0 items</a>
             <a href="" id="addTab">Add Book</a>
         </div>
-        <div class="main">
+        <main>
             <p id="bookList"></p>
-        </div>
-        <div class="form">
-            <form>
+        </main>
+        <div class="form" id="bookForm">
+            <form class="formContainer">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title"><br>
 
@@ -141,13 +141,14 @@
                 <label for="completed">Completed</label><br>
 
                 <input type="submit" value="BOOKMARK">
+                <button class="closeForm">Cancel</button>
             </form>
             
             <!-- floating action button (FAB) -->
-            <button id="formBook">Add Book</button>
-            <br><img src="./images/icon_bookmark.png" width="50px" height="auto"> <!-- just for debugging -->
+            <button class="openForm">Add Book</button>
         </div>
 
-        <script src="script.js"></script>
+        <script type="module" src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
     </body>
 </html>
