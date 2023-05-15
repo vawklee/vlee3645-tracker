@@ -8,6 +8,7 @@ DECO2017 Assignment 3
 - change sidebar widths and heights to vw and vh, more responsive
 - dropshadow for items
 - floating action button for showing the form
+- displaying form css is not working currently
 
 ## Method of approach
 1. Worked on creating basic HTML layout
