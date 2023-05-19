@@ -102,13 +102,13 @@ form input, form select, #closeBookButton {
     z-index: 9;
 }
 
-.formContainer {
+.bookForm {
     max-width: 300px;
     padding: 10px;
     background-color: blue;
 }
 
-.formContainer .closeForm {
+.bookForm .closeForm {
     background-color: #BD4E4E;
 }
 
