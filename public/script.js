@@ -26,6 +26,7 @@ function displayBooks() {
 
     let localBooks = JSON.parse(localStorage.getItem('books'));
     console.log(localBooks);
+    console.log(localBooks.length);
 
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
@@ -95,31 +96,6 @@ function displayBooks() {
 
 var bookArray = [];
 
-// displaying the information for each book in the book array
-/*bookArray.forEach(element => {
-    console.log(element.author);
-    console.log(element.year);
-    console.log(element.id);
-
-    let item = document.createElement('div');
-    let thumbnail = new Image(150, 150);
-    // image does not show up
-    // not yet determined by genre, dimensions TBD
-    // thumbnail.src = './images/icon_bookmark.png';
-    thumbnail.src = logoImage;
-    let information = document.createElement('p');
-
-    information.innerHTML = `<p><strong>Title: ${element.title}</strong><br>Author: ${element.author}<br>Date added: ${element.date}</p>`;
-
-    let delButton = document.createElement('button');
-    delButton.textContent = 'Delete';
-
-    item.appendChild(thumbnail);
-    item.appendChild(information);
-    item.appendChild(delButton);
-    bookDisplay.appendChild(item);
-});*/
-
 function addBook(title, author, year, genre, language, format, status) {
     let book = {
         title,
@@ -152,14 +128,12 @@ function addBook(title, author, year, genre, language, format, status) {
 // testing if addBook() works
 addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed');
 
-// bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
-// bookArray.push(new Book('House of Leaves', 'Mark Z. Danielewski', '2000', 'Fiction', 'English', 'Hardback', 'Reading'));
-
-// updates the # items button text (sidebar) based on the amount of books in the book array OUTDATED
-if (bookArray.length == 1) {
-    document.getElementById('numItems').textContent = `${bookArray.length} item`;
+// updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
+let localBooks = JSON.parse(localStorage.getItem('books'));
+if (localBooks.length == 1) {
+    document.getElementById('numItems').textContent = `${localBooks.length} item`;
 } else {
-    document.getElementById('numItems').textContent = `${bookArray.length} items`;
+    document.getElementById('numItems').textContent = `${localBooks.length} items`;
 }
 
 // displays the form after the 'add book' button is clicked
