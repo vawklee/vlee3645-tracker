@@ -1,4 +1,3 @@
-// import logoImage from './images/icon_bookmark.png';
 import images from './images/thumbnails/*.jpg';
 console.log(images);
 
@@ -19,14 +18,12 @@ class Book {
 }
 
 const form = document.getElementById('bookForm'); // the form for adding books
-var bookDisplay = document.getElementById('bookList'); // the p for displaying books in the tracking list  
+var bookDisplay = document.getElementById('bookList'); // the paragraph for displaying books in the tracking list  
 
 function displayBooks() {
     bookDisplay.innerHTML = "";
 
     let localBooks = JSON.parse(localStorage.getItem('books'));
-    console.log(localBooks);
-    console.log(localBooks.length);
 
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
@@ -60,15 +57,15 @@ function displayBooks() {
             
             let item = document.createElement('div');
             item.setAttribute('data-id', book.id);
-            
-            //TEMPORARY METHOD FOR IMAGES
-            // let thumbnail = new Image(150, 150);
-            // thumbnail.src = logoImage;
+
+            let cover = new Image(150, 150);
+            cover.src = thumbnail;
 
             let information = document.createElement('p');
-            information.innerHTML = `<p><img src=${thumbnail} width='150'><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
+            // information.innerHTML = `<p><img src=${thumbnail} width='250'><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
+            information.innerHTML = `<p><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
 
-            // item.appendChild(thumbnail);
+            item.appendChild(cover);
             item.appendChild(information);
             bookDisplay.appendChild(item);
 

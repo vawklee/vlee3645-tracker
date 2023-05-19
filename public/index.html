@@ -9,17 +9,17 @@
         <link rel="icon" href="./images/icon_bookmark.png">
     </head>
     <body>
-        <div id="sidebar">
+        <aside id="sidebar">
             <img src="./images/logo_book.png" id="logoSidebar"> 
             <h1>bookMarker</h1>
             <!-- default value is 0 items rather than leaving the whole line blank -->
             <a href="" id="numItems">0 items</a>
             <a href="" id="addTab">Add Book</a>
-        </div>
+        </aside>
         <main>
             <p id="bookList"></p>
         </main>
-        <div class="form" id="formContainer">
+        <section class="form" id="formContainer">
             <form id="bookForm">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" value=""><br>
@@ -143,7 +143,7 @@
                 <button class="closeForm" id="closeBookButton">Cancel</button>
                 <input type="submit" id="submitButton" value="Submit">
             </form>
-        </div>
+        </section>
         <!-- floating action button (FAB) -->
         <button class="openForm" id="addBookButton">Add Book</button>
 
