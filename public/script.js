@@ -137,7 +137,9 @@ function addBook(title, author, year, genre, language, format, status) {
 }
 
 // testing if addBook() works
-addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed');
+// addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed');
+
+displayBooks();
 
 // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
 let localBooks = JSON.parse(localStorage.getItem('books'));
