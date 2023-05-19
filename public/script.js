@@ -21,39 +21,11 @@ class Book {
 var form = document.getElementById('bookForm'); // the form for adding books
 var bookDisplay = document.getElementById('bookList'); // the p for displaying books in the tracking list  
 
-// functionality for when a form is submitted
-/* form.addEventListener('submit', function(event) {
-    event.preventDefault(); // prevents page from refreshing
-    console.log(form.elements.title.value);
-
-    let statusValue = "";
-    if (form.elements.planning.checked) {
-        statusValue = form.elements.planning.value;
-    } else if (form.elements.reading.checked) {
-        statusValue = form.elements.reading.value;
-    } else if (form.elements.completed.checked) {
-        statusValue = form.elements.completed.value;
-    } else {
-        statusValue = "Not Available";
-    }
-
-    addBook(
-        form.elements.title.value,
-        form.elements.author.value,
-        form.elements.year.value,
-        form.elements.genre.value,
-        form.elements.language.value,
-        form.elements.format.value,
-        statusValue,
-    )
-
-    console.log(bookArray);
-}) */
-
 function displayBooks() {
     bookDisplay.innerHTML = "";
 
     let localBooks = JSON.parse(localStorage.getItem('books'));
+    console.log(localBooks);
 
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
@@ -99,10 +71,11 @@ function displayBooks() {
             item.appendChild(information);
             bookDisplay.appendChild(item);
 
-            form.reset();
+            // form.reset(); // WHY IS THIS NOT WORKING
 
             let delButton = document.createElement('button');
-            delButton.textConent = 'Delete';
+            let delButtonText = document.createTextNode('Delete');
+            delButton.appendChild(delButtonText);
             item.appendChild(delButton); // delete button is attached to each book item
 
             delButton.addEventListener('click', function(event) {
@@ -113,6 +86,8 @@ function displayBooks() {
                 })
 
                 localStorage.setItem('books', JSON.stringify(localBooks));
+
+                item.remove();
             })
         })
     }
@@ -180,7 +155,7 @@ addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback
 // bookArray.push(new Book('Jane Eyre', 'Charlotte Bronte', '1800', 'Classics', 'English', 'Paperback', 'Planning to read'));
 // bookArray.push(new Book('House of Leaves', 'Mark Z. Danielewski', '2000', 'Fiction', 'English', 'Hardback', 'Reading'));
 
-// updates the # items button text (sidebar) based on the amount of books in the book array
+// updates the # items button text (sidebar) based on the amount of books in the book array OUTDATED
 if (bookArray.length == 1) {
     document.getElementById('numItems').textContent = `${bookArray.length} item`;
 } else {
@@ -202,30 +177,30 @@ openButton.addEventListener('click', function() {
     
     console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
+})
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // prevents page from refreshing
-        console.log(form.elements.title.value);
-    
-        let statusValue = "";
-        if (form.elements.planning.checked) {
-            statusValue = form.elements.planning.value;
-        } else if (form.elements.reading.checked) {
-            statusValue = form.elements.reading.value;
-        } else if (form.elements.completed.checked) {
-            statusValue = form.elements.completed.value;
-        } else {
-            statusValue = "Not Available";
-        }
-    
-        addBook(
-            form.elements.title.value,
-            form.elements.author.value,
-            form.elements.year.value,
-            form.elements.genre.value,
-            form.elements.language.value,
-            form.elements.format.value,
-            statusValue,
-        )
-    })
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevents page from refreshing
+    console.log(form.elements.title.value);
+
+    let statusValue = "";
+    if (form.elements.planning.checked) {
+        statusValue = form.elements.planning.value;
+    } else if (form.elements.reading.checked) {
+        statusValue = form.elements.reading.value;
+    } else if (form.elements.completed.checked) {
+        statusValue = form.elements.completed.value;
+    } else {
+        statusValue = "Not Available";
+    }
+
+    addBook(
+        form.elements.title.value,
+        form.elements.author.value,
+        form.elements.year.value,
+        form.elements.genre.value,
+        form.elements.language.value,
+        form.elements.format.value,
+        statusValue,
+    )
 })
