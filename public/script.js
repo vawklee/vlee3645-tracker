@@ -89,6 +89,12 @@ function displayBooks() {
                 localStorage.setItem('books', JSON.stringify(localBooks));
 
                 item.remove();
+
+                if (localBooks.length == 1) {
+                    document.getElementById('numItems').textContent = `${localBooks.length} item`;
+                } else {
+                    document.getElementById('numItems').textContent = `${localBooks.length} items`;
+                }
             })
         })
     }
