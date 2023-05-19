@@ -8,7 +8,7 @@
     "prestart": "parcel build ./public/index.html",
     "dev": "parcel serve ./public/index.html"
   },
-  "author": "",
+  "author": "Veronica L.",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
