@@ -87,6 +87,7 @@ function displayBooks() {
 
                 item.remove();
 
+                // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
                 if (localBooks.length == 1) {
                     document.getElementById('numItems').textContent = `${localBooks.length} item`;
                 } else {
@@ -95,6 +96,7 @@ function displayBooks() {
             })
         })
     }
+    
     if (localBooks.length == 1) {
         document.getElementById('numItems').textContent = `${localBooks.length} item`;
     } else {
@@ -136,15 +138,13 @@ function addBook(title, author, year, genre, language, format, status) {
 // testing if addBook() works
 // addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed');
 
-displayBooks();
-
 // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
-let localBooks = JSON.parse(localStorage.getItem('books'));
-if (localBooks.length == 1) {
-    document.getElementById('numItems').textContent = `${localBooks.length} item`;
-} else {
-    document.getElementById('numItems').textContent = `${localBooks.length} items`;
-}
+// let localBooks = JSON.parse(localStorage.getItem('books'));
+// if (localBooks.length == 1) {
+//     document.getElementById('numItems').textContent = `${localBooks.length} item`;
+// } else {
+//     document.getElementById('numItems').textContent = `${localBooks.length} items`;
+// }
 
 // displays the form after the 'add book' button is clicked
 // var openButton = document.getElementsByClassName('openForm');
@@ -188,3 +188,5 @@ openButton.addEventListener('click', function() {
         )
     })
 })
+
+displayBooks();

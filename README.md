@@ -3,12 +3,12 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 *I logged in on the wrong account at one point, sorry.*
 
 ## To-Do [Delete later]
-- adding and saving to local storage
-- thumbnail images are showing up, but now how to get multiple of them working
+- some issue where starting on a new browser breaks the localbook array, returning null
+- click to view items
+- hover over items colour change
 - source images for thumbnails
 - default empty state: notification to get users to add books
 - change sidebar widths and heights to vw and vh, more responsive
-- displaying form css is not working currently
 
 ## Method of approach
 1. Worked on creating basic HTML layout
