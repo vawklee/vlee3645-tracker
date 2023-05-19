@@ -159,6 +159,12 @@ openButton.addEventListener('click', function() {
     document.getElementById('formContainer').style.display = "block";
 })
 
+// let submitButton = document.getElementById('submitButton');
+// submitButton.addEventListener('click', function(event) {
+//     console.log('submit button was clicked');
+//     event.preventDefault();
+// })
+
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevents page from refreshing
     console.log(form.elements.title.value);

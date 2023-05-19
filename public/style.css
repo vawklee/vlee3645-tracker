@@ -94,8 +94,8 @@ form input, form select, #closeBookButton {
 }
 
 .form {
-    /* display: none; */
-    display: block;
+    display: none;
+    /* display: block; */
     position: fixed;
     bottom: 0;
     right: 15px;
