@@ -18,7 +18,7 @@ class Book {
     }
 }
 
-var form = document.getElementById('bookForm'); // the form for adding books
+const form = document.getElementById('bookForm'); // the form for adding books
 var bookDisplay = document.getElementById('bookList'); // the p for displaying books in the tracking list  
 
 function displayBooks() {
@@ -72,7 +72,7 @@ function displayBooks() {
             item.appendChild(information);
             bookDisplay.appendChild(item);
 
-            // form.reset(); // WHY IS THIS NOT WORKING
+            form.reset(); // unsure if this is clashing with something right now
 
             let delButton = document.createElement('button');
             let delButtonText = document.createTextNode('Delete');
@@ -97,6 +97,11 @@ function displayBooks() {
                 }
             })
         })
+    }
+    if (localBooks.length == 1) {
+        document.getElementById('numItems').textContent = `${localBooks.length} item`;
+    } else {
+        document.getElementById('numItems').textContent = `${localBooks.length} items`;
     }
 }
 
@@ -157,36 +162,30 @@ openButton.addEventListener('click', function() {
     
     console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
-})
 
-// let submitButton = document.getElementById('submitButton');
-// submitButton.addEventListener('click', function(event) {
-//     console.log('submit button was clicked');
-//     event.preventDefault();
-// })
-
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // prevents page from refreshing
-    console.log(form.elements.title.value);
-
-    let statusValue = "";
-    if (form.elements.planning.checked) {
-        statusValue = form.elements.planning.value;
-    } else if (form.elements.reading.checked) {
-        statusValue = form.elements.reading.value;
-    } else if (form.elements.completed.checked) {
-        statusValue = form.elements.completed.value;
-    } else {
-        statusValue = "Not Available";
-    }
-
-    addBook(
-        form.elements.title.value,
-        form.elements.author.value,
-        form.elements.year.value,
-        form.elements.genre.value,
-        form.elements.language.value,
-        form.elements.format.value,
-        statusValue,
-    )
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // prevents page from refreshing
+        console.log(form.elements.title.value);
+    
+        let statusValue = "";
+        if (form.elements.planning.checked) {
+            statusValue = form.elements.planning.value;
+        } else if (form.elements.reading.checked) {
+            statusValue = form.elements.reading.value;
+        } else if (form.elements.completed.checked) {
+            statusValue = form.elements.completed.value;
+        } else {
+            statusValue = "Not Available";
+        }
+    
+        addBook(
+            form.elements.title.value,
+            form.elements.author.value,
+            form.elements.year.value,
+            form.elements.genre.value,
+            form.elements.language.value,
+            form.elements.format.value,
+            statusValue,
+        )
+    })
 })
