@@ -72,6 +72,18 @@ function displayBooks() {
             form.reset();
 
             let delButton = document.createElement('button');
+            delButton.textConent = 'Delete';
+            item.appendChild(delButton); // delete button is attached to each book item
+
+            delButton.addEventListener('click', function(event) {
+                localBooks.forEach(function(arrayElement, arrayIndex) {
+                    if (arrayElement.id == item.getAttribute('data-id')) {
+                        localBooks.splice(arrayIndex, 1);
+                    }
+                })
+
+                localStorage.setItem('books', JSON.stringify(localBooks));
+            })
         })
     }
 }
