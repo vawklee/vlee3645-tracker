@@ -35,6 +35,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 ## User testing (optional)
 
 ## Things to improve
+- Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre
 - A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/ but the time constraints for this code haven't allowed me to integrate that list 
 
