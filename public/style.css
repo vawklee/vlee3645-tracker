@@ -147,11 +147,11 @@ form input, form select, #closeBookButton {
 
 #moreInformation {
     display: none;
-    padding: 500px 300px;
+    padding: 50vw 50vh;
     background-color: red;
     position: fixed;
-    top: 250;
-    left: 350;
+    top: 40;
+    left: 275;
 }
 
 @media screen and (max-width: 750px) {

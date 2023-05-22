@@ -83,16 +83,13 @@ function displayBooks() {
             delButton.appendChild(delIcon);
             item.appendChild(delButton); // delete button is attached to each book item
 
-            delButton.addEventListener('click', function(event) {
-                // deletes book from storage and displayed list
-                // localBooks.forEach(function(arrayElement, arrayIndex) {
-                //     if (arrayElement.id == item.getAttribute('data-id')) {
-                //         localBooks.splice(arrayIndex, 1);
-                //     }
-                // })
-                // localStorage.setItem('books', JSON.stringify(localBooks));
-                // item.remove();
+            // not used in the list display, only used in the in-depth view of book information
+            let closeButton = document.createElement('a');
+            let closeIcon = new Image(50, 50);
+            closeIcon.src = icons['close'];
+            closeButton.appendChild(closeIcon);
 
+            delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
                 // deletes book from storage and displayed list
                 if (confirm("Are you sure you want to delete this item?")) {
@@ -103,8 +100,8 @@ function displayBooks() {
                     })
                     localStorage.setItem('books', JSON.stringify(localBooks));
                     item.remove();
-                } 
-
+                    document.getElementById('moreInformation').style.display = "none"; // ensures closing of in-depth view if book is deleted from there
+                }
                 // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
                 if (localBooks.length == 1) {
                     document.getElementById('numItems').textContent = `${localBooks.length} item`;
@@ -115,19 +112,18 @@ function displayBooks() {
 
             // opens up a new in-depth view of the book if the item is clicked
             item.addEventListener('click', function() {
-                console.log(`this ${book.format} was clicked`);
                 console.log(`showing more information about ${book.title}`);
                 var bookInfo = document.getElementById('moreInformation');
-
-                // let infoContainer = document.createElement('div');
-                // infoContainer.className = 'bookInformation';
-                
-                // bookInfo.appendChild(infoContainer);
+            
                 bookInfo.style.display = "block";
-                let closeButton = document.createElement('a');
-                
 
-                bookInfo.appendChild(delButton);
+                bookInfo.appendChild(closeButton);
+                // bookInfo.appendChild(delButton);
+
+                closeButton.addEventListener('click', function() {
+                    bookInfo.style.display = "none";
+                    console.log('closing in-depth view');
+                })
             })
         })
     }

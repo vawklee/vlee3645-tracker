@@ -6,6 +6,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 ## To-Do [Delete later]
 - some issue where starting on a new browser breaks the localbook array, returning null
 - click to view items
+- close and delete buttons append too many times
 - default empty state: notification to get users to add books
 
 ## Method of approach
