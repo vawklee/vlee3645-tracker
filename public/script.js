@@ -76,7 +76,8 @@ function displayBooks() {
 
             form.reset();
 
-            let delButton = document.createElement('button');
+            // creating a delete button to be attached to each item
+            let delButton = document.createElement('a');
             // let delButtonText = document.createTextNode('Delete');
             // delButton.appendChild(delButtonText);
             let delIcon = new Image(50, 50);
@@ -85,15 +86,25 @@ function displayBooks() {
             item.appendChild(delButton); // delete button is attached to each book item
 
             delButton.addEventListener('click', function(event) {
-                localBooks.forEach(function(arrayElement, arrayIndex) {
-                    if (arrayElement.id == item.getAttribute('data-id')) {
-                        localBooks.splice(arrayIndex, 1);
-                    }
-                })
+                // deletes book from storage and displayed list
+                // localBooks.forEach(function(arrayElement, arrayIndex) {
+                //     if (arrayElement.id == item.getAttribute('data-id')) {
+                //         localBooks.splice(arrayIndex, 1);
+                //     }
+                // })
+                // localStorage.setItem('books', JSON.stringify(localBooks));
+                // item.remove();
 
-                localStorage.setItem('books', JSON.stringify(localBooks));
-
-                item.remove();
+                // pop up to confirm the user's action, ensures no accidental deletes
+                if (confirm("Are you sure you want to delete this item?")) {
+                    localBooks.forEach(function(arrayElement, arrayIndex) {
+                        if (arrayElement.id == item.getAttribute('data-id')) {
+                            localBooks.splice(arrayIndex, 1);
+                        }
+                    })
+                    localStorage.setItem('books', JSON.stringify(localBooks));
+                    item.remove();
+                } 
 
                 // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
                 if (localBooks.length == 1) {
@@ -116,7 +127,7 @@ function displayBooks() {
     }
 }
 
-var bookArray = [];
+// var bookArray = [];
 
 function addBook(title, author, year, genre, language, format, status, rating) {
     let book = {
@@ -152,16 +163,7 @@ function addBook(title, author, year, genre, language, format, status, rating) {
 // testing if addBook() works
 // addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed', 2);
 
-// updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
-// let localBooks = JSON.parse(localStorage.getItem('books'));
-// if (localBooks.length == 1) {
-//     document.getElementById('numItems').textContent = `${localBooks.length} item`;
-// } else {
-//     document.getElementById('numItems').textContent = `${localBooks.length} items`;
-// }
-
 // displays the form after the 'add book' button is clicked
-// var openButton = document.getElementsByClassName('openForm');
 var openButton = document.getElementById('addBookButton');
 openButton.addEventListener('click', function() {
     // displays the form after the 'cancel' button is clicked 

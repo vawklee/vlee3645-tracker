@@ -94,7 +94,7 @@ form input, form select, #closeBookButton {
 }
 
 /* visual cue for interactivity when cursor hovers over the button */
-.openForm:hover {
+.openForm:hover, #bookList div a:hover {
     transform: scale(1.1);
 }
 
@@ -139,7 +139,7 @@ form input, form select, #closeBookButton {
     margin: 5px 0px 5px 5px;
 }
 
-#bookList div button {
+#bookList div a {
     width: 50px;
     height: 50px;
     margin: 25px;

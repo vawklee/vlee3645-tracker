@@ -32,8 +32,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 - Mobile screen: TBC
 
 ## List of issues
-- Form will submit multiple empty book additions if you click cancel and then try to add another book
-SOLVED: moving the form event listener outside of the addbutton event listener seemed to work
+- Form will submit multiple empty book additions if you click cancel and then try to add another book // SOLVED: moving the form event listener outside of the addbutton event listener seemed to work
 
 ## Things to improve
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
