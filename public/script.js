@@ -170,41 +170,40 @@ openButton.addEventListener('click', function() {
     closeButton.addEventListener('click', function(event) {
         event.preventDefault(); // prevents page from refreshing when closing the form
         console.log('closing form')
-        form.reset();
         document.getElementById('formContainer').style.display = "none";
+        form.reset();
     })
-    
     console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
+})
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // prevents page from refreshing
-        console.log(form.elements.title.value);
-    
-        let statusValue = "";
-        if (form.elements.planning.checked) {
-            statusValue = form.elements.planning.value;
-        } else if (form.elements.reading.checked) {
-            statusValue = form.elements.reading.value;
-        } else if (form.elements.completed.checked) {
-            statusValue = form.elements.completed.value;
-        } else {
-            statusValue = "Not Available";
-        }
-    
-        addBook(
-            form.elements.title.value,
-            form.elements.author.value,
-            form.elements.year.value,
-            form.elements.genre.value,
-            form.elements.language.value,
-            form.elements.format.value,
-            statusValue,
-            form.elements.rating.value
-        )
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevents page from refreshing
+    console.log(form.elements.title.value);
 
-        form.reset();
-    })
+    let statusValue = "";
+    if (form.elements.planning.checked) {
+        statusValue = form.elements.planning.value;
+    } else if (form.elements.reading.checked) {
+        statusValue = form.elements.reading.value;
+    } else if (form.elements.completed.checked) {
+        statusValue = form.elements.completed.value;
+    } else {
+        statusValue = "Not Available";
+    }
+
+    addBook(
+        form.elements.title.value,
+        form.elements.author.value,
+        form.elements.year.value,
+        form.elements.genre.value,
+        form.elements.language.value,
+        form.elements.format.value,
+        statusValue,
+        form.elements.rating.value
+    )
+
+    form.reset();
 })
 
 displayBooks();

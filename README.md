@@ -1,10 +1,10 @@
 # vlee3645-tracker
 DECO2017 Assignment 3 - Media Consumption (Books) Tracker
+<br>
 *I logged in on the wrong account at one point, sorry.*
 
 ## To-Do [Delete later]
 - some issue where starting on a new browser breaks the localbook array, returning null
-- sometimes the form submits items twice
 - click to view items
 - default empty state: notification to get users to add books
 
@@ -30,7 +30,10 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 - PC screen: 3840 x 2160
 - Mobile screen: TBC
 
-## User testing (optional)
+## List of issues
+- Form will submit multiple empty book additions if you click cancel and then try to add another book
+<br>
+SOLVED: moving the form event listener outside of the addbutton event listener seemed to work
 
 ## Things to improve
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
