@@ -1,9 +1,5 @@
 import images from './images/thumbnails/*.jpg';
-console.log(images);
 import icons from './images/icons/*.png';
-console.log(icons);
-
-console.log(images);
 
 class Book {
     constructor(title, author, year, genre, language, format, status) {
@@ -21,14 +17,17 @@ class Book {
     }
 }
 
-const form = document.getElementById('bookForm'); // the form for adding books
-var bookDisplay = document.getElementById('bookList'); // the paragraph for displaying books in the tracking list  
+// the form for adding books
+const form = document.getElementById('bookForm');
+// the paragraph for displaying books in the tracking list 
+var bookDisplay = document.getElementById('bookList');  
 
 function displayBooks() {
     bookDisplay.innerHTML = "";
 
     let localBooks = JSON.parse(localStorage.getItem('books'));
 
+    // displaying each book added to the tracker, as long as they exist
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
             // images set based on format of the book from a thumbnails folder
@@ -59,12 +58,14 @@ function displayBooks() {
                     break;
             }
             
+            // creation of each item in the list 
             let item = document.createElement('div');
             item.setAttribute('data-id', book.id);
 
-            let cover = new Image(150, 150);
+            let cover = new Image(250);
             cover.src = thumbnail;
 
+            // creation of quick view information
             let information = document.createElement('p');
             information.innerHTML = `<p><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
 
@@ -72,7 +73,7 @@ function displayBooks() {
             item.appendChild(information);
             bookDisplay.appendChild(item);
 
-            form.reset(); // unsure if this is clashing with something right now
+            form.reset();
 
             let delButton = document.createElement('button');
             // let delButtonText = document.createTextNode('Delete');

@@ -17,22 +17,24 @@
             <a href="" id="addTab">Add Book</a>
         </aside>
         <main>
+            <!-- this is where the book information will be displayed -->
             <p id="bookList"></p>
         </main>
         <section class="form" id="formContainer">
+            <!-- form for adding a book to the tracker, is not visible until you click the button 'add book' -->
             <form id="bookForm">
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" value=""><br>
+                <input required type="text" name="title" id="title" value=""><br>
 
                 <label for="author">Author's name</label>
-                <input type="text" name="author" id="author" value=""><br>
+                <input required type="text" name="author" id="author" value=""><br>
 
                 <label for="year">Publication year</label>
-                <input type="number" name="year" id="year" value=""><br>
+                <input required type="number" name="year" id="year" value=""><br>
 
                 <!-- an atrociously long list of genres to provide a variety of options for the user, sourced from https://reference.yourdictionary.com/books-literature/different-types-of-books.html -->
                 <label for="genre">Genre</label>
-                <select name="genre" id="genre">
+                <select required name="genre" id="genre">
                     <!-- split into option groups for better categorisation between Fiction and Non-fiction -->
                     <optgroup label="FICTION">
                         <option value="action">Action</option>
@@ -102,7 +104,7 @@
 
                 <!-- list of common languages sourced from https://journal.lib.uoguelph.ca/index.php/perj/article/view/826/1358 -->
                 <label for="language">Language</label>
-                <select name="language" id="language">
+                <select required name="language" id="language">
                     <option value="arabic">Arabic</option>
                     <option value="chineseSimplified">Chinese (Simplified)</option>
                     <option value="chineseTraditional">Chinese (Traditional)</option>
@@ -122,7 +124,7 @@
 
                 <!-- list of book formats sourced from https://becomeawritertoday.com/book-formats/ -->
                 <label for="format">Format</label>
-                <select name="format" id="format">
+                <select required name="format" id="format">
                     <option value="audiobook">Audiobook</option>
                     <option value="ebook">E-Book</option>
                     <option value="hardcover">Hardcover</option>
