@@ -1,4 +1,6 @@
 import images from './images/thumbnails/*.jpg';
+import icons from './images/icons/*.png';
+
 console.log(images);
 
 class Book {
@@ -62,7 +64,6 @@ function displayBooks() {
             cover.src = thumbnail;
 
             let information = document.createElement('p');
-            // information.innerHTML = `<p><img src=${thumbnail} width='250'><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
             information.innerHTML = `<p><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
 
             item.appendChild(cover);
@@ -72,8 +73,11 @@ function displayBooks() {
             form.reset(); // unsure if this is clashing with something right now
 
             let delButton = document.createElement('button');
-            let delButtonText = document.createTextNode('Delete');
-            delButton.appendChild(delButtonText);
+            // let delButtonText = document.createTextNode('Delete');
+            // delButton.appendChild(delButtonText);
+            let delIcon = new Image(50, 50);
+            delIcon.src = icons['trash'];
+            delButton.appendChild(delIcon);
             item.appendChild(delButton); // delete button is attached to each book item
 
             delButton.addEventListener('click', function(event) {
@@ -186,6 +190,8 @@ openButton.addEventListener('click', function() {
             form.elements.format.value,
             statusValue,
         )
+
+        form.reset();
     })
 })
 

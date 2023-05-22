@@ -4,6 +4,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 
 ## To-Do [Delete later]
 - some issue where starting on a new browser breaks the localbook array, returning null
+- sometimes the form submits items twice
 - click to view items
 - hover over items colour change
 - source images for thumbnails
@@ -40,6 +41,8 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 - A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/ but the time constraints for this code haven't allowed me to integrate that list 
 
 ## Reference List (APA 7th)
+
+Fadhli, K. (2023, January 21). _Trash_. The Noun Project. https://thenounproject.com/icon/trash-5519944/ 
 
 Harms, N. (2022). Top 10 Book Formats All Writers Should Know. _Become a Writer Today_. https://becomeawritertoday.com/book-formats/
 
