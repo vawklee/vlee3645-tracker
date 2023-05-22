@@ -2,7 +2,7 @@ import images from './images/thumbnails/*.jpg';
 import icons from './images/icons/*.png';
 
 class Book {
-    constructor(title, author, year, genre, language, format, status) {
+    constructor(title, author, year, genre, language, format, status, rating) {
         this.title = title;
         this.author = author;
         this.year = year;
@@ -10,6 +10,7 @@ class Book {
         this.language = language;
         this.format = format;
         this.status = status;
+        this.rating = rating;
         // cover image is provided based on the genre of the book entered
         // ID and Date are not provided by the user
         this.date = new Date().toDateString();
@@ -113,7 +114,7 @@ function displayBooks() {
 
 var bookArray = [];
 
-function addBook(title, author, year, genre, language, format, status) {
+function addBook(title, author, year, genre, language, format, status, rating) {
     let book = {
         title,
         author,
@@ -122,6 +123,7 @@ function addBook(title, author, year, genre, language, format, status) {
         language,
         format,
         status,
+        rating,
         date: new Date().toDateString(),
         id: Date.now()
     }
@@ -135,6 +137,7 @@ function addBook(title, author, year, genre, language, format, status) {
             console.log("Book ID already exists");
         } else {
             localBooks.push(book);
+            console.log(book);
         }
     }
 
@@ -143,7 +146,7 @@ function addBook(title, author, year, genre, language, format, status) {
 }
 
 // testing if addBook() works
-// addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed');
+// addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed', 2);
 
 // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
 // let localBooks = JSON.parse(localStorage.getItem('books'));
@@ -192,6 +195,7 @@ openButton.addEventListener('click', function() {
             form.elements.language.value,
             form.elements.format.value,
             statusValue,
+            form.elements.rating.value
         )
 
         form.reset();
