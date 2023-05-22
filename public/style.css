@@ -145,6 +145,15 @@ form input, form select, #closeBookButton {
     margin: 25px;
 }
 
+#moreInformation {
+    display: none;
+    padding: 500px 300px;
+    background-color: red;
+    position: fixed;
+    top: 250;
+    left: 350;
+}
+
 @media screen and (max-width: 750px) {
     #logoSidebar {
         width: auto;

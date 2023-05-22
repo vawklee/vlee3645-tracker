@@ -78,8 +78,6 @@ function displayBooks() {
 
             // creating a delete button to be attached to each item
             let delButton = document.createElement('a');
-            // let delButtonText = document.createTextNode('Delete');
-            // delButton.appendChild(delButtonText);
             let delIcon = new Image(50, 50);
             delIcon.src = icons['trash'];
             delButton.appendChild(delIcon);
@@ -96,6 +94,7 @@ function displayBooks() {
                 // item.remove();
 
                 // pop up to confirm the user's action, ensures no accidental deletes
+                // deletes book from storage and displayed list
                 if (confirm("Are you sure you want to delete this item?")) {
                     localBooks.forEach(function(arrayElement, arrayIndex) {
                         if (arrayElement.id == item.getAttribute('data-id')) {
@@ -114,12 +113,26 @@ function displayBooks() {
                 }
             })
 
-            item.addEventListener('click', function(event) {
+            // opens up a new in-depth view of the book if the item is clicked
+            item.addEventListener('click', function() {
                 console.log(`this ${book.format} was clicked`);
+                console.log(`showing more information about ${book.title}`);
+                var bookInfo = document.getElementById('moreInformation');
+
+                // let infoContainer = document.createElement('div');
+                // infoContainer.className = 'bookInformation';
+                
+                // bookInfo.appendChild(infoContainer);
+                bookInfo.style.display = "block";
+                let closeButton = document.createElement('a');
+                
+
+                bookInfo.appendChild(delButton);
             })
         })
     }
     
+    // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
     if (localBooks.length == 1) {
         document.getElementById('numItems').textContent = `${localBooks.length} item`;
     } else {
@@ -127,8 +140,7 @@ function displayBooks() {
     }
 }
 
-// var bookArray = [];
-
+// adds book to the tracker & creates a date and ID for the item
 function addBook(title, author, year, genre, language, format, status, rating) {
     let book = {
         title,
@@ -160,9 +172,6 @@ function addBook(title, author, year, genre, language, format, status, rating) {
     displayBooks();
 }
 
-// testing if addBook() works
-// addBook('Jane Eyre', 'Charlotte Bronte', 1800, 'Classics', 'English', 'Paperback', 'Completed', 2);
-
 // displays the form after the 'add book' button is clicked
 var openButton = document.getElementById('addBookButton');
 openButton.addEventListener('click', function() {
@@ -179,10 +188,12 @@ openButton.addEventListener('click', function() {
     document.getElementById('formContainer').style.display = "block";
 })
 
+// adds book to the tracking list when the form is submitted
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevents page from refreshing
     console.log(form.elements.title.value);
 
+    // checks which radio button was selected for the book reading status, and assigns that value to a temporary variable
     let statusValue = "";
     if (form.elements.planning.checked) {
         statusValue = form.elements.planning.value;
@@ -206,6 +217,7 @@ form.addEventListener('submit', function(event) {
     )
 
     form.reset();
+    document.getElementById('formContainer').style.display = "none"; // closes the form once the book is added
 })
 
 displayBooks();
