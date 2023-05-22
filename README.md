@@ -17,7 +17,8 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 1. Wrote out the HTML for all the form elements
 2. General CSS for spacing of input boxes
 3. Scripted the 'Add book' and 'Cancel' buttons
-4. Currently solving issues with having the form show up and disappear
+4. localstorage and JSON parsing is now working; items are saved on the browser
+5. CSS for the pop up form needs to be updated
 
 ## Testing
 ### Browsers used for testing and viewing
@@ -32,7 +33,6 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 
 ## List of issues
 - Form will submit multiple empty book additions if you click cancel and then try to add another book
-<br>
 SOLVED: moving the form event listener outside of the addbutton event listener seemed to work
 
 ## Things to improve
