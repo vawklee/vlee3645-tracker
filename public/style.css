@@ -79,15 +79,18 @@ form input, form select, #closeBookButton {
 /* button used to open the form to add a book, position is fixed to the bottom right of the page */
 .openForm {
     background-color: #BD4E4E;
-    filter: drop-shadow(0px 3px 2px #997245);
     color:#FCF8F4;
+    font-size: xx-large;
     font-weight: bold;
-    padding: 15px 20px;
+    filter: drop-shadow(0px 3px 2px #997245);
+    /* padding: 15px 20px; */
+    width: 75px;
+    height: 75px;
     border: none;
-    border-radius: 25px;
+    border-radius: 50px;
     position: fixed;
-    bottom: 23px;
-    right: 28px;
+    bottom: 25px;
+    right: 25px;
 }
 
 /* visual cue for interactivity when cursor hovers over the button */
@@ -125,7 +128,7 @@ form input, form select, #closeBookButton {
 }
 
 #bookList div:hover {
-    background-color: red;
+    background-color: #F2E8DE;
 }
 
 #bookList div img {

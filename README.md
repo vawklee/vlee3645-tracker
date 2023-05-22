@@ -6,10 +6,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 - some issue where starting on a new browser breaks the localbook array, returning null
 - sometimes the form submits items twice
 - click to view items
-- hover over items colour change
-- source images for thumbnails
 - default empty state: notification to get users to add books
-- change sidebar widths and heights to vw and vh, more responsive
 
 ## Method of approach
 1. Worked on creating basic HTML layout
@@ -37,6 +34,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 
 ## Things to improve
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
+- Changing the sidebar to be more responsive by using view width and height; had difficulties with formatting the list display to respond the same as the sidebar
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre
 - A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/ but the time constraints for this code haven't allowed me to integrate that list 
 

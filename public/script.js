@@ -21,7 +21,7 @@ class Book {
 // the form for adding books
 const form = document.getElementById('bookForm');
 // the paragraph for displaying books in the tracking list 
-var bookDisplay = document.getElementById('bookList');  
+var bookDisplay = document.getElementById('bookList'); 
 
 function displayBooks() {
     bookDisplay.innerHTML = "";
@@ -68,7 +68,7 @@ function displayBooks() {
 
             // creation of quick view information
             let information = document.createElement('p');
-            information.innerHTML = `<p><strong>Title: ${book.title}</strong><br>Author: ${book.author}<br>Date added: ${book.date}</p>`;
+            information.innerHTML = `<p><strong>${book.title}</strong><br><br>Written by ${book.author}<br><br>${book.status}<br><br>Date added: ${book.date}</p>`;
 
             item.appendChild(cover);
             item.appendChild(information);
@@ -101,6 +101,10 @@ function displayBooks() {
                 } else {
                     document.getElementById('numItems').textContent = `${localBooks.length} items`;
                 }
+            })
+
+            item.addEventListener('click', function(event) {
+                console.log(`this ${book.format} was clicked`);
             })
         })
     }
@@ -166,6 +170,7 @@ openButton.addEventListener('click', function() {
     closeButton.addEventListener('click', function(event) {
         event.preventDefault(); // prevents page from refreshing when closing the form
         console.log('closing form')
+        form.reset();
         document.getElementById('formContainer').style.display = "none";
     })
     
