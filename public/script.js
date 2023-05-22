@@ -1,5 +1,7 @@
 import images from './images/thumbnails/*.jpg';
+console.log(images);
 import icons from './images/icons/*.png';
+console.log(icons);
 
 console.log(images);
 
@@ -33,25 +35,25 @@ function displayBooks() {
             let thumbnail = null;
             switch (book.format) {
                 case 'audiobook':
-                    thumbnail = images['katze-musik-hoerer']
+                    thumbnail = images['audiobook']
                     break;
                 case 'ebook':
-                    thumbnail = images['katze-musik-hoerer']
+                    thumbnail = images['ebook']
                     break;
                 case 'hardcover':
-                    thumbnail = images['katze-musik-hoerer']
+                    thumbnail = images['hardcover']
                     break;
                 case 'kindle':
-                    thumbnail = images['lucian-roman']
+                    thumbnail = images['kindle']
                     break;
                 case 'manuscript':
-                    thumbnail = images['lucian-roman']
+                    thumbnail = images['manuscript']
                     break;
                 case 'paperback':
-                    thumbnail = images['lucian-roman']
+                    thumbnail = images['paperback']
                     break;
                 case 'photobook':
-                    thumbnail = images['lucian-roman']
+                    thumbnail = images['photobook']
                     break;
                 default: 
                     break;
