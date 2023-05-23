@@ -5,7 +5,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 
 ## To-Do [Delete later]
 - some issue where starting on a new browser breaks the localbook array, returning null
-- click to view items
+- click to view items, might have to be a view button
 - close and delete buttons append too many times
 - default empty state: notification to get users to add books
 
@@ -36,6 +36,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 - Form will submit multiple empty book additions if you click cancel and then try to add another book // SOLVED: moving the form event listener outside of the addbutton event listener seemed to work
 
 ## Things to improve
+- Wasn't able to get clicking on the item itself to view the item working, TBC
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
 - Changing the sidebar to be more responsive by using view width and height; had difficulties with formatting the list display to respond the same as the sidebar
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre

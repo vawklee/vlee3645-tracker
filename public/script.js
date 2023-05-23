@@ -84,10 +84,16 @@ function displayBooks() {
             item.appendChild(delButton); // delete button is attached to each book item
 
             // not used in the list display, only used in the in-depth view of book information
-            let closeButton = document.createElement('a');
-            let closeIcon = new Image(50, 50);
-            closeIcon.src = icons['close'];
-            closeButton.appendChild(closeIcon);
+            // let closeView = document.createElement('a');
+            // let closeIcon = new Image(50, 50);
+            // closeIcon.src = icons['close'];
+            // closeView.appendChild(closeIcon);
+
+            let viewButton = document.createElement('button');
+            let viewIcon = new Image(50, 50);
+            viewIcon.src = icons['close']; //temporary icon for testing
+            viewButton.appendChild(viewIcon);
+            item.appendChild(viewButton);
 
             delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
@@ -110,17 +116,18 @@ function displayBooks() {
                 }
             })
 
-            // opens up a new in-depth view of the book if the item is clicked
-            item.addEventListener('click', function() {
+            // opens up a new in-depth view of the book if the view item button is clicked
+            viewButton.addEventListener('click', function() {
                 console.log(`showing more information about ${book.title}`);
                 var bookInfo = document.getElementById('moreInformation');
             
                 bookInfo.style.display = "block";
 
-                bookInfo.appendChild(closeButton);
+                // bookInfo.appendChild(closeView);
                 // bookInfo.appendChild(delButton);
 
-                closeButton.addEventListener('click', function() {
+                let closeView = document.getElementById('closeViewButton');
+                closeView.addEventListener('click', function() {
                     bookInfo.style.display = "none";
                     console.log('closing in-depth view');
                 })
