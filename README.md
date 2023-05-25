@@ -3,6 +3,10 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 <br>
 *I logged in on the wrong account at one point, sorry.*
 
+## Depoloyment procedures
+1. run `npm install`
+2. run `npm run dev`
+
 ## To-Do [Delete later]
 - some issue where starting on a new browser breaks the localbook array, returning null
 - click to view items, might have to be a view button
