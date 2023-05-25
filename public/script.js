@@ -32,28 +32,28 @@ function displayBooks() {
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
             // images set based on format of the book from a thumbnails folder
-            let thumbnail = null;
+            let thumbnailSrc = null;
             switch (book.format) {
                 case 'audiobook':
-                    thumbnail = images['audiobook']
+                    thumbnailSrc = images['audiobook']
                     break;
                 case 'ebook':
-                    thumbnail = images['ebook']
+                    thumbnailSrc = images['ebook']
                     break;
                 case 'hardcover':
-                    thumbnail = images['hardcover']
+                    thumbnailSrc = images['hardcover']
                     break;
                 case 'kindle':
-                    thumbnail = images['kindle']
+                    thumbnailSrc = images['kindle']
                     break;
                 case 'manuscript':
-                    thumbnail = images['manuscript']
+                    thumbnailSrc = images['manuscript']
                     break;
                 case 'paperback':
-                    thumbnail = images['paperback']
+                    thumbnailSrc = images['paperback']
                     break;
                 case 'photobook':
-                    thumbnail = images['photobook']
+                    thumbnailSrc = images['photobook']
                     break;
                 default: 
                     break;
@@ -64,7 +64,7 @@ function displayBooks() {
             item.setAttribute('data-id', book.id);
 
             let cover = new Image(250);
-            cover.src = thumbnail;
+            cover.src = thumbnailSrc;
 
             // creation of quick view information
             let information = document.createElement('p');
@@ -75,6 +75,13 @@ function displayBooks() {
             bookDisplay.appendChild(item);
 
             form.reset();
+
+            let viewButton = document.createElement('a');
+            let viewIcon = new Image();
+            viewIcon.src = icons['view'];
+            viewIcon.height = 50;
+            viewButton.appendChild(viewIcon);
+            item.appendChild(viewButton);
 
             // creating a delete button to be attached to each item
             let delButton = document.createElement('a');
@@ -88,13 +95,6 @@ function displayBooks() {
             // let closeIcon = new Image(50, 50);
             // closeIcon.src = icons['close'];
             // closeView.appendChild(closeIcon);
-
-            let viewButton = document.createElement('a');
-            let viewIcon = new Image();
-            viewIcon.src = icons['view'];
-            viewIcon.height = 50;
-            viewButton.appendChild(viewIcon);
-            item.appendChild(viewButton);
 
             delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
@@ -121,15 +121,33 @@ function displayBooks() {
             viewButton.addEventListener('click', function() {
                 console.log(`showing more information about ${book.title}`);
                 var bookInfo = document.getElementById('moreInformation');
-            
-                bookInfo.style.display = "block";
+                bookInfo.style.display = "flex";
+                document.getElementById('bookDescription').style.display = "block"; // ensures that information shows up, having issues with it staying visible when it shouldn't
+                document.getElementById('closeViewButton').style.display = "block"; // ensures that the close button shows up, having issues with it staying visible when it shouldn't
 
-                // bookInfo.appendChild(closeView);
-                // bookInfo.appendChild(delButton);
+                // assigning the same thumbnail cover from the item
+                let largeThumbnail = document.getElementById('viewThumbnail');
+                largeThumbnail.src = thumbnailSrc;
+                largeThumbnail.height = 500;
+
+                let deepInfo = document.getElementById('bookDescription');
+                deepInfo.innerHTML = `<p>
+                Title: ${book.title}<br><br>
+                Author: ${book.author}<br><br>
+                Publication year: ${book.year}<br><br>
+                Genre: ${book.genre}<br><br>
+                Language: ${book.language}<br><br>
+                Format: ${book.format}<br><br>
+                Status: ${book.status}<br><br>
+                Rating: ${book.rating} / 5 stars
+                </p>`;
 
                 let closeView = document.getElementById('closeViewButton');
-                closeView.addEventListener('click', function() {
+                closeView.addEventListener('click', function(event) {
+                    event.preventDefault();
                     bookInfo.style.display = "none";
+                    document.getElementById('bookDescription').style.display = "none"; // ensures that the in-depth information disappears
+                    document.getElementById('closeViewButton').style.display = "none"; // ensures that the close button disappears, having issues with it staying visible
                     console.log('closing in-depth view');
                 })
             })

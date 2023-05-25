@@ -39,6 +39,7 @@ body {
     padding-bottom: 75px;
 }
 
+/* sidebar tab styling */
 #sidebar a {
     font-size: 35px;
     font-weight: bolder;
@@ -146,13 +147,32 @@ form input, form select, #closeBookButton {
     margin: 25px;
 }
 
+/* for viewing in-depth information about a book */
 #moreInformation {
     display: none;
-    padding: 50vw 50vh;
     background-color: red;
+    /* width: 5vw;
+    height: 5vh; */
+    padding: 10px;
+    margin-left: 15px;
     position: fixed;
-    top: 40;
+    top: 5vh;
     left: 275;
+}
+
+#viewThumbnail {
+    float: left;
+    margin: 10px 10px;
+}
+
+#bookDescription {
+    display: none;
+}
+
+#closeViewButton {
+    display: none;
+    float: right;
+    margin: 10px 10px;
 }
 
 @media screen and (max-width: 750px) {
