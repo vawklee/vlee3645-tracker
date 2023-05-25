@@ -1,6 +1,4 @@
-# vlee3645-tracker
-DECO2017 Assignment 3 - Media Consumption (Books) Tracker
-<br>
+# DECO2017 Assignment 3 - Book Tracker
 *I logged in on the wrong account at one point, sorry.*
 
 ## Deployment procedures
