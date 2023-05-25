@@ -3,7 +3,7 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 <br>
 *I logged in on the wrong account at one point, sorry.*
 
-## Depoloyment procedures
+## Deployment procedures
 1. run `npm install`
 2. run `npm run dev`
 
@@ -26,10 +26,15 @@ DECO2017 Assignment 3 - Media Consumption (Books) Tracker
 5. CSS for the pop up form needs to be updated
 
 ## Testing
+Optimal screen size for viewing:
+<br>
+Desktop: 1920 x 1080
+<br>
+Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
+
 ### Browsers used for testing and viewing
 - Google Chrome
 - Microsoft Edge
-- Mozilla Firefox
 
 ### Screen sizes used
 - Laptop screen: 1920 x 1080
@@ -69,6 +74,8 @@ Lobachev, S. (2008). _Lobachev_. https://journal.lib.uoguelph.ca/index.php/perj/
 Media, S. (2018). _book near eyeglasses and cappuccino_. [Photograph]. unsplash.com. https://unsplash.com/photos/nGrfKmtwv24 
 
 MSEd, M. M. (2022). List of Book Types or Genres. In _YourDictionary_. https://reference.yourdictionary.com/books-literature/different-types-of-books.html
+
+Pujiyono, Y. (2020, January 10). _read_. The Noun Project. https://thenounproject.com/icon/read-3187961/
 
 Tutunaru, O. (2020). _black e book reader on white surface_. [Photograph]. unsplash.com. https://unsplash.com/photos/RMgQQntEkWM 
 

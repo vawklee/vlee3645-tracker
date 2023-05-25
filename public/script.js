@@ -89,9 +89,10 @@ function displayBooks() {
             // closeIcon.src = icons['close'];
             // closeView.appendChild(closeIcon);
 
-            let viewButton = document.createElement('button');
-            let viewIcon = new Image(50, 50);
-            viewIcon.src = icons['close']; //temporary icon for testing
+            let viewButton = document.createElement('a');
+            let viewIcon = new Image();
+            viewIcon.src = icons['view'];
+            viewIcon.height = 50;
             viewButton.appendChild(viewIcon);
             item.appendChild(viewButton);
 
