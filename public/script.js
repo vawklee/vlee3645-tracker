@@ -125,6 +125,36 @@ function displayBooks() {
                 largeThumbnail.src = thumbnailSrc;
                 largeThumbnail.height = 500;
 
+                // &#11088; HTML code for the yellow star emoji
+                // &#11089; HTML code for the small black star
+                let ratingStars = "";
+
+                switch (book.rating) {
+                    case "0":
+                        ratingStars = "⭑ ⭑ ⭑ ⭑ ⭑";
+                        break;
+                    case "1":
+                        ratingStars = "⭐ ⭑ ⭑ ⭑ ⭑";
+                        break;
+                    case "2":
+                        ratingStars = "⭐ ⭐ ⭑ ⭑ ⭑";
+                        break;
+                    case "3":
+                        ratingStars = "⭐ ⭐ ⭐ ⭑ ⭑";
+                        break;
+                    case "4":
+                        ratingStars = "⭐ ⭐ ⭐ ⭐ ⭑";
+                        break;
+                    case "5":
+                        ratingStars = "⭐ ⭐ ⭐ ⭐ ⭐";
+                        break;
+                    default:
+                        ratingStars = "Not Available";
+                        break;
+                }
+
+                console.log(ratingStars);
+
                 let deepInfo = document.getElementById('bookDescription');
                 deepInfo.innerHTML = `<p>
                 <strong>Title:</strong> ${book.title}<br><br>
@@ -134,7 +164,7 @@ function displayBooks() {
                 <strong>Language:</strong> ${book.language}<br><br>
                 <strong>Format:</strong> ${book.format}<br><br>
                 <strong>Status:</strong> ${book.status}<br><br>
-                <strong>Rating:</strong> ${book.rating} / 5 stars
+                <strong>Rating:</strong> ${ratingStars}
                 </p>`;
 
                 let closeView = document.getElementById('closeViewButton');

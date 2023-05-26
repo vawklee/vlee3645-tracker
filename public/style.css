@@ -194,9 +194,11 @@ form input, form select, #closeBookButton {
     float: left;
 }
 
+/* all of the book information */
 #bookDescription {
     display: none;
     margin: auto 15px;
+    font-size: large;
 }
 
 #closeViewButton {
