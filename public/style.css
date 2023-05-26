@@ -100,12 +100,14 @@ form input, form select, #closeBookButton {
     transform: scale(1.1);
 }
 
+/* positioning of the book adding form */
 .form {
     display: none;
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    /* border: 3px solid red; */
+    /* bottom: 15px;
+    right: 15px; */
+    top: 25%;
+    left: 25%;
     z-index: 9;
 }
 
@@ -113,6 +115,7 @@ form input, form select, #closeBookButton {
     max-width: 500px;
     padding: 10px;
     background-color: #EBD9C7;
+    filter: drop-shadow(0px 3px 2px #997245);
 }
 
 #bookForm .closeForm {
@@ -147,32 +150,46 @@ form input, form select, #closeBookButton {
     margin: 25px;
 }
 
+/* blurring the background for contrast when viewing in-depth information */
+.backgroundBlur {
+    display: none;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(252, 248, 244, 0.75);
+}
+
 /* for viewing in-depth information about a book */
 #moreInformation {
     display: none;
-    background-color: red;
-    /* width: 5vw;
-    height: 5vh; */
+    background-color: #EBD9C7;
+    filter: drop-shadow(0px 3px 2px #997245);
     padding: 10px;
     margin-left: 15px;
     position: fixed;
-    top: 5vh;
-    left: 275;
+    /* top: 5vh;
+    left: 275; */
+    top: 25%;
+    left: 25%;
+}
+
+#viewThumbnail, #bookDescription, #closeViewButton {
+    margin: 10px 10px;
 }
 
 #viewThumbnail {
     float: left;
-    margin: 10px 10px;
 }
 
 #bookDescription {
     display: none;
+    margin: auto 15px;
 }
 
 #closeViewButton {
     display: none;
     float: right;
-    margin: 10px 10px;
 }
 
 @media screen and (max-width: 750px) {

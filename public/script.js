@@ -122,6 +122,7 @@ function displayBooks() {
                 console.log(`showing more information about ${book.title}`);
                 var bookInfo = document.getElementById('moreInformation');
                 bookInfo.style.display = "flex";
+                document.getElementById('backgroundBlur').style.display = "block"; // ensures the background blur shows up
                 document.getElementById('bookDescription').style.display = "block"; // ensures that information shows up, having issues with it staying visible when it shouldn't
                 document.getElementById('closeViewButton').style.display = "block"; // ensures that the close button shows up, having issues with it staying visible when it shouldn't
 
@@ -146,6 +147,7 @@ function displayBooks() {
                 closeView.addEventListener('click', function(event) {
                     event.preventDefault();
                     bookInfo.style.display = "none";
+                    document.getElementById('backgroundBlur').style.display = "none"; // ensures the background blur disappears
                     document.getElementById('bookDescription').style.display = "none"; // ensures that the in-depth information disappears
                     document.getElementById('closeViewButton').style.display = "none"; // ensures that the close button disappears, having issues with it staying visible
                     console.log('closing in-depth view');
@@ -198,16 +200,17 @@ function addBook(title, author, year, genre, language, format, status, rating) {
 var openButton = document.getElementById('addBookButton');
 openButton.addEventListener('click', function() {
     // displays the form after the 'cancel' button is clicked 
-    // var closeButton = document.getElementsByClassName('closeForm');
     var closeButton = document.getElementById('closeBookButton');
     closeButton.addEventListener('click', function(event) {
         event.preventDefault(); // prevents page from refreshing when closing the form
         console.log('closing form')
         document.getElementById('formContainer').style.display = "none";
+        document.getElementById('backgroundBlur').style.display = "none"; // makes the background blur disappear
         form.reset();
     })
     console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
+    document.getElementById('backgroundBlur').style.display = "block"; // makes the background blur appear when the user is using the form
 })
 
 // adds book to the tracking list when the form is submitted
