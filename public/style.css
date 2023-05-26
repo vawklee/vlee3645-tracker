@@ -69,6 +69,7 @@ main, .form {
 /* SOURCE: How To Create a Popup Form With CSS. (n.d.). https://www.w3schools.com/howto/howto_js_popup_form.asp */
 /* button used to open the form to add a book, position is fixed to the bottom right of the page */
 .openForm {
+    display: flex;
     background-color: #BD4E4E;
     color:#FCF8F4;
     font-size: xx-large;
@@ -82,6 +83,11 @@ main, .form {
     position: fixed;
     bottom: 25px;
     right: 25px;
+}
+
+.openForm img {
+    align-items: center;
+    /* WIP */
 }
 
 /* visual cue for interactivity when cursor hovers over the button */
