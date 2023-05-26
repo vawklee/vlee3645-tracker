@@ -38,7 +38,7 @@
                 <label for="year">Publication year</label>
                 <input required type="number" name="year" id="year" value=""><br>
 
-                <!-- an atrociously long list of genres to provide a variety of options for the user, sourced from https://reference.yourdictionary.com/books-literature/different-types-of-books.html -->
+                <!-- a very long list of genres to provide a variety of options for the user, sourced from https://reference.yourdictionary.com/books-literature/different-types-of-books.html -->
                 <label for="genre">Genre</label>
                 <select required name="genre" id="genre">
                     <!-- split into option groups for better categorisation between Fiction and Non-fiction -->
@@ -108,7 +108,7 @@
                     </optgroup>
                 </select><br>
 
-                <!-- list of common languages sourced from https://journal.lib.uoguelph.ca/index.php/perj/article/view/826/1358 -->
+                <!-- list of common languages sourced from https://journal.lib.uoguelph.ca/index.php/perj/article/view/826/1358; There are infinitely more languages but it makes the selection absurdly long -->
                 <label for="language">Language</label>
                 <select required name="language" id="language">
                     <option value="Arabic">Arabic</option>
@@ -164,7 +164,7 @@
             </form>
         </section>
 
-        <!-- floating action button (FAB) -->
+        <!-- floating action button (FAB) to add a book -->
         <button class="openForm" id="addBookButton">+</button>
 
         <script type="module" src="script.js"></script>
