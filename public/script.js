@@ -90,12 +90,6 @@ function displayBooks() {
             delButton.appendChild(delIcon);
             item.appendChild(delButton); // delete button is attached to each book item
 
-            // not used in the list display, only used in the in-depth view of book information
-            // let closeView = document.createElement('a');
-            // let closeIcon = new Image(50, 50);
-            // closeIcon.src = icons['close'];
-            // closeView.appendChild(closeIcon);
-
             delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
                 // deletes book from storage and displayed list
@@ -133,14 +127,14 @@ function displayBooks() {
 
                 let deepInfo = document.getElementById('bookDescription');
                 deepInfo.innerHTML = `<p>
-                Title: ${book.title}<br><br>
-                Author: ${book.author}<br><br>
-                Publication year: ${book.year}<br><br>
-                Genre: ${book.genre}<br><br>
-                Language: ${book.language}<br><br>
-                Format: ${book.format}<br><br>
-                Status: ${book.status}<br><br>
-                Rating: ${book.rating} / 5 stars
+                <strong>Title:</strong> ${book.title}<br><br>
+                <strong>Author:</strong> ${book.author}<br><br>
+                <strong>Publication year:</strong> ${book.year}<br><br>
+                <strong>Genre:</strong> ${book.genre}<br><br>
+                <strong>Language:</strong> ${book.language}<br><br>
+                <strong>Format:</strong> ${book.format}<br><br>
+                <strong>Status:</strong> ${book.status}<br><br>
+                <strong>Rating:</strong> ${book.rating} / 5 stars
                 </p>`;
 
                 let closeView = document.getElementById('closeViewButton');
@@ -206,11 +200,20 @@ openButton.addEventListener('click', function() {
         console.log('closing form')
         document.getElementById('formContainer').style.display = "none";
         document.getElementById('backgroundBlur').style.display = "none"; // makes the background blur disappear
+        
+        // switching colours of the tabs back to default
+        document.getElementById('addTab').style.backgroundColor = "#BD4E4E";
+        document.getElementById('numItems').style.backgroundColor = "#FCF8F4";
         form.reset();
     })
+
     console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
     document.getElementById('backgroundBlur').style.display = "block"; // makes the background blur appear when the user is using the form
+
+    // switching colours of the sidebar tabs to indicate what action is active
+    document.getElementById('addTab').style.backgroundColor = "#FCF8F4";
+    document.getElementById('numItems').style.backgroundColor = "#BD4E4E";
 })
 
 // adds book to the tracking list when the form is submitted
@@ -243,6 +246,10 @@ form.addEventListener('submit', function(event) {
 
     form.reset();
     document.getElementById('formContainer').style.display = "none"; // closes the form once the book is added
+    document.getElementById('backgroundBlur').style.display = "none"; // makes the background blur disappear
+    // switching colours of the tabs back to default
+    document.getElementById('addTab').style.backgroundColor = "#BD4E4E";
+    document.getElementById('numItems').style.backgroundColor = "#FCF8F4";
 })
 
 displayBooks();
