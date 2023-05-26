@@ -34,25 +34,25 @@ function displayBooks() {
             // images set based on format of the book from a thumbnails folder
             let thumbnailSrc = null;
             switch (book.format) {
-                case 'audiobook':
+                case 'Audiobook':
                     thumbnailSrc = images['audiobook']
                     break;
-                case 'ebook':
+                case 'E-book':
                     thumbnailSrc = images['ebook']
                     break;
-                case 'hardcover':
+                case 'Hardcover':
                     thumbnailSrc = images['hardcover']
                     break;
-                case 'kindle':
+                case 'Kindle':
                     thumbnailSrc = images['kindle']
                     break;
-                case 'manuscript':
+                case 'Manuscript':
                     thumbnailSrc = images['manuscript']
                     break;
-                case 'paperback':
+                case 'Paperback':
                     thumbnailSrc = images['paperback']
                     break;
-                case 'photobook':
+                case 'Photobook':
                     thumbnailSrc = images['photobook']
                     break;
                 default: 
