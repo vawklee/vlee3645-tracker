@@ -178,9 +178,8 @@ function displayBooks() {
     } else {
         console.log('book tracker is empty');
 
+        // creation of welcome message
         let item = document.createElement('div');
-
-        // creation of quick view information
         let information = document.createElement('p');
         information.innerHTML = `<p>Welcome to bookMarker!<br><br>To track a book, click the + button in the bottom right corner of the page</p>`;
 
