@@ -6,10 +6,10 @@
 2. run `npm run dev`
 
 ## To-Do [Delete later]
-- some issue where starting on a new browser breaks the localbook array, returning null
 - responsiveness for mobile
 - default empty state: notification to get users to add books
 - delete button when in in-depth view
+- making the item list have columns
 
 ## Method of approach
 1. Worked on creating basic HTML layout

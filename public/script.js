@@ -153,8 +153,6 @@ function displayBooks() {
                         break;
                 }
 
-                console.log(ratingStars);
-
                 let deepInfo = document.getElementById('bookDescription');
                 deepInfo.innerHTML = `<p>
                 <strong>Title:</strong> ${book.title}<br><br>
@@ -174,10 +172,21 @@ function displayBooks() {
                     document.getElementById('backgroundBlur').style.display = "none"; // ensures the background blur disappears
                     document.getElementById('bookDescription').style.display = "none"; // ensures that the in-depth information disappears
                     document.getElementById('closeViewButton').style.display = "none"; // ensures that the close button disappears, having issues with it staying visible
-                    console.log('closing in-depth view');
                 })
             })
         })
+    } else {
+        console.log('book tracker is empty');
+
+        let item = document.createElement('div');
+
+        // creation of quick view information
+        let information = document.createElement('p');
+        information.innerHTML = `<p>Welcome to bookMarker!<br><br>To track a book, click the + button in the bottom right corner of the page</p>`;
+
+        item.appendChild(information);
+        bookDisplay.appendChild(item);
+        item.style.fontSize = "larger";
     }
     
     // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array
@@ -227,7 +236,6 @@ openButton.addEventListener('click', function() {
     var closeButton = document.getElementById('closeBookButton');
     closeButton.addEventListener('click', function(event) {
         event.preventDefault(); // prevents page from refreshing when closing the form
-        console.log('closing form')
         document.getElementById('formContainer').style.display = "none";
         document.getElementById('backgroundBlur').style.display = "none"; // makes the background blur disappear
         
@@ -236,8 +244,6 @@ openButton.addEventListener('click', function() {
         document.getElementById('numItems').style.backgroundColor = "#FCF8F4";
         form.reset();
     })
-
-    console.log('opening form')
     document.getElementById('formContainer').style.display = "block";
     document.getElementById('backgroundBlur').style.display = "block"; // makes the background blur appear when the user is using the form
 
@@ -249,7 +255,6 @@ openButton.addEventListener('click', function() {
 // adds book to the tracking list when the form is submitted
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevents page from refreshing
-    console.log(form.elements.title.value);
 
     // checks which radio button was selected for the book reading status, and assigns that value to a temporary variable
     let statusValue = "";
