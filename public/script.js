@@ -178,14 +178,14 @@ function displayBooks() {
     } else {
         console.log('book tracker is empty');
 
-        // creation of welcome message
+        // creation of welcome message to get users started
         let item = document.createElement('div');
         let information = document.createElement('p');
-        information.innerHTML = `<p>Welcome to bookMarker!<br><br>To track a book, click the + button in the bottom right corner of the page</p>`;
+        information.innerHTML = `<p>Welcome to bookMarker!<br><br>To get started, click the red button in the bottom right corner of the page</p>`;
 
         item.appendChild(information);
         bookDisplay.appendChild(item);
-        item.style.fontSize = "larger";
+        item.style.fontSize = "x-large";
     }
     
     // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array

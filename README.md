@@ -11,17 +11,22 @@
 - delete button when in in-depth view
 - making the item list have columns
 
-## Method of approach
-1. Worked on creating basic HTML layout
-2. Added CSS gradually to new elements created in HTML
-3. Added JS for the elements bit by bit
+## Iteration and implementation
+[insert screenshot comparisons?]
+
+### General method of approach
+1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
+2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner
+3. Using example items added to an array in JS, styled the visuals of each item in the tracking app with CSS
+4. Implemented the use of localstorage in JS to save user's tracked items on the browser
+5. Most of the CSS styling was applied later, along with a responsive mobile version
 
 ### Creating the pop-up form
 1. Wrote out the HTML for all the form elements
 2. General CSS for spacing of input boxes
 3. Scripted the 'Add book' and 'Cancel' buttons
 4. localstorage and JSON parsing is now working; items are saved on the browser
-5. CSS for the pop up form needs to be updated
+5. CSS for the pop up form was updated; now includes an opaque div for a background blur to accentuate the form's presence on the screen
 
 ## Testing
 Optimal screen size for viewing:
@@ -36,12 +41,10 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 
 ### Screen sizes used
 - Laptop screen: 1920 x 1080
-- PC screen: 3840 x 2160
+- PC monitor: 3840 x 2160
 - Mobile screen: TBC
 
-## List of issues
-
-## Things to improve
+## Potential improvements
 - Not including a delete button in the in-depth view of the item for the user's convenience
 - Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
