@@ -70,7 +70,7 @@ function displayBooks() {
             let item = document.createElement('div');
             item.setAttribute('data-id', book.id);
 
-            let cover = new Image(250);
+            let cover = new Image(320);
             cover.src = thumbnailSrc;
             cover.alt = altText;
 
@@ -83,6 +83,8 @@ function displayBooks() {
             bookDisplay.appendChild(item);
 
             form.reset();
+
+            let buttonContainer = document.createElement('div');
 
             let viewButton = document.createElement('a');
             let viewIcon = new Image();

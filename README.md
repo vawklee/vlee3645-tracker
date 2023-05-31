@@ -11,7 +11,8 @@
 - style the form better?
 
 ## Iteration and implementation
-[insert screenshot comparisons?]
+### Landing Page
+
 
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
