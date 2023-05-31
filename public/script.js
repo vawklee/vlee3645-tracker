@@ -25,7 +25,6 @@ var bookDisplay = document.getElementById('bookList');
 
 function displayBooks() {
     bookDisplay.innerHTML = "";
-
     let localBooks = JSON.parse(localStorage.getItem('books'));
 
     // displaying each book added to the tracker, as long as they exist
