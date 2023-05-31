@@ -56,7 +56,9 @@ A screenshot of the current working prototype of the in-depth information displa
 
 ![Screenshot of the old view icon](documentation/prototype/view_icon_old.png)
 > The old view icon
-![Screenshot of the current view icon](documentation/prototype/view_icon_old.png)
+<br>
+
+![Screenshot of the current view icon](documentation/prototype/view_icon_new.png)
 > The current view icon
 <br>
 Originally, I used a book icon to represent the option to view more information, however, this intention may not be effectively conveyed to the user. Due to this possible confustion, I opted to use the question mark icon due to its more familiar design language that indicates where users should click to find out more information about something on a webpage.
