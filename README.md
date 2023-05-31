@@ -41,15 +41,15 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 
 ### Screen sizes used
 - Laptop screen: 1920 x 1080
-- PC monitor: 3840 x 2160
+- PC monitor: 3840 x 2160 (note: some CSS does not work with this screen size)
 - Mobile screen: TBC
 
 ## Potential improvements
 - Not including a delete button in the in-depth view of the item for the user's convenience
 - Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
-- Changing the sidebar to be more responsive by using view width and height; had difficulties with formatting the list display to respond the same as the sidebar
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre
+- Changing the sidebar to be more responsive by using view width and height; had difficulties with formatting the list display to respond the same as the sidebar
 - A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/ but the time constraints for this code haven't allowed me to integrate that list 
 
 ## Reference List (APA 7th)

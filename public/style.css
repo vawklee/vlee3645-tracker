@@ -87,11 +87,6 @@ main, .form {
     right: 25px;
 }
 
-.openForm img {
-    align-items: center;
-    /* WIP */
-}
-
 /* visual cue for interactivity when cursor hovers over the button */
 .openForm:hover, #bookList div a:hover, #closeBookButton:hover, #submitButton:hover {
     transform: scale(1.1);
