@@ -32,27 +32,35 @@ function displayBooks() {
         localBooks.forEach(function(book) {
             // images set based on format of the book from a thumbnails folder
             let thumbnailSrc = null;
+            let altText = "";
             switch (book.format) {
                 case 'Audiobook':
                     thumbnailSrc = images['audiobook']
+                    altText = "A white phone with earphones on a brown background";
                     break;
                 case 'E-book':
                     thumbnailSrc = images['ebook']
+                    altText = "A black iPhone on a black leatherbound book rests on a wooden table";
                     break;
                 case 'Hardcover':
                     thumbnailSrc = images['hardcover']
+                    altText = "A large grey book infront of a pink background";
                     break;
                 case 'Kindle':
                     thumbnailSrc = images['kindle']
+                    altText = "An Amazon Kindle on a white background";
                     break;
                 case 'Manuscript':
                     thumbnailSrc = images['manuscript']
+                    altText = "A tall stack of papers with yellow sticky notes";
                     break;
                 case 'Paperback':
                     thumbnailSrc = images['paperback']
+                    altText = "A novel spread open on a white tablecloth with a coffee cup above";
                     break;
                 case 'Photobook':
                     thumbnailSrc = images['photobook']
+                    altText = "A hand turning the page of a magazine with pictures";
                     break;
                 default: 
                     break;
@@ -64,6 +72,7 @@ function displayBooks() {
 
             let cover = new Image(250);
             cover.src = thumbnailSrc;
+            cover.alt = altText;
 
             // creation of quick view information
             let information = document.createElement('p');
