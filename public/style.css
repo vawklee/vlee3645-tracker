@@ -88,7 +88,7 @@ main, .form {
 }
 
 /* visual cue for interactivity when cursor hovers over the button */
-.openForm:hover, #bookList div a:hover, #closeBookButton:hover, #submitButton:hover {
+.openForm:hover, .viewButton img:hover, .delButton img:hover, #closeBookButton:hover, #submitButton:hover {
     transform: scale(1.1);
 }
 
@@ -146,7 +146,7 @@ form input, form select {
 } */
 
 /* for each item in the list, it displays a rectangle section */
-#bookList div {
+#bookList > div {
     list-style-type: none;
     background-color: #EBD9C7;
     padding: 10px 10px;
@@ -175,10 +175,25 @@ form input, form select {
     /* justify-content: center; */
 }
 
-#bookList div a {
+/* old CSS for close & view buttons when they weren't appended to a container of their own */
+/* #bookList div a {
     width: 50px;
     height: 50px;
     margin: 25px 15px;
+    /* justify-content: right;
+} */
+
+/* contains the view and close button */
+.buttonContainer {
+    margin-top: 15px;
+    position: absolute;
+    right: 5px;
+}
+
+#bookList div div a {
+    width: 50px;
+    height: 50px;
+    margin: 25px auto;
     /* justify-content: right; */
 }
 

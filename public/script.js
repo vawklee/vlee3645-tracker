@@ -85,20 +85,28 @@ function displayBooks() {
             form.reset();
 
             let buttonContainer = document.createElement('div');
+            buttonContainer.className = "buttonContainer";
 
             let viewButton = document.createElement('a');
+            viewButton.className = "viewButton";
             let viewIcon = new Image();
             viewIcon.src = icons['view'];
             viewIcon.height = 50;
             viewButton.appendChild(viewIcon);
-            item.appendChild(viewButton);
 
             // creating a delete button to be attached to each item
             let delButton = document.createElement('a');
+            delButton.className = "delButton";
             let delIcon = new Image(50, 50);
             delIcon.src = icons['trash'];
             delButton.appendChild(delIcon);
-            item.appendChild(delButton); // delete button is attached to each book item
+
+            // item.appendChild(viewButton);
+            // item.appendChild(delButton); // delete button is attached to each book item
+
+            buttonContainer.appendChild(viewButton);
+            buttonContainer.appendChild(delButton);
+            item.appendChild(buttonContainer);
 
             delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
