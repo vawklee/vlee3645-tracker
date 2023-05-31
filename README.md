@@ -46,6 +46,25 @@ A screenshot of the web app using `display: flex` on the container that displays
 ```
 This is more accurate to my proposed designs and was much more suitable for making use of the available space on the web page, however the nature of flexbox made it difficult to have a consistent style for each book being displayed, as you can see with the bottom row of items having a wider width than the top row of items. Due to this inconsistency, I chose to use `display: block` for the tracker's display to have a much more consistent styling.
 
+### Viewing more information
+![Mockup design of the in-depth information](documentation/mockups/information_pc.png)
+A mockup of the proposed design for viewing all the information available about a tracked item.
+
+![Current prototype of the in-depth information view](documentation/prototype/information_pc.png)
+A screenshot of the current working prototype of the in-depth information display about a book the user clicks on. Due to some limitations with eventlisteners in JavaScript, I was not able to make the book information viewable with a simple click of the item, as the eventlistener will confuse clicking the delete button with clicking the item to view; for this reason, I added the view button (represented by a question icon) for users to click when they want to see more information.
+<br>
+
+![Screenshot of the old view icon](documentation/prototype/view_icon_old.png)
+> The old view icon
+![Screenshot of the current view icon](documentation/prototype/view_icon_old.png)
+> The current view icon
+<br>
+Originally, I used a book icon to represent the option to view more information, however, this intention may not be effectively conveyed to the user. Due to this possible confustion, I opted to use the question mark icon due to its more familiar design language that indicates where users should click to find out more information about something on a webpage.
+<br>
+The current version of the information view takes up less screen space on the web page, with the intention being to make it less confronting for users to suddenly see a large pop-up on their screen, as well as keep the information more compact and readable by the eyes. The star emojis were added to the rating's heading as a better visual representation of the user's rating of a book.
+<br>
+The background blur to create contrast with the other elements on the page was achieved with a `<div>` that is by default not displayed, and can only be activated by the view button or when opening the form. Note that the floating action button is still clickable in the view state, as a shortbut for users that wish to add more books at any time.
+
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
 2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner

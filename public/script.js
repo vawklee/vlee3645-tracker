@@ -91,7 +91,7 @@ function displayBooks() {
             let viewButton = document.createElement('a');
             viewButton.className = "viewButton";
             let viewIcon = new Image();
-            viewIcon.src = icons['view'];
+            viewIcon.src = icons['information'];
             viewIcon.height = 50;
             viewButton.appendChild(viewIcon);
 
