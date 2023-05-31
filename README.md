@@ -7,9 +7,8 @@
 
 ## To-Do [Delete later]
 - responsiveness for mobile
-- default empty state: notification to get users to add books
 - delete button when in in-depth view
-- making the item list have columns
+- style the form better?
 
 ## Iteration and implementation
 [insert screenshot comparisons?]
@@ -29,7 +28,7 @@
 5. CSS for the pop up form was updated; now includes an opaque div for a background blur to accentuate the form's presence on the screen
 
 ## Testing
-Optimal screen size for viewing:
+**Optimal screen size for viewing**
 <br>
 Desktop: 1920 x 1080
 <br>
@@ -39,13 +38,14 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 - Google Chrome
 - Microsoft Edge
 
-### Screen sizes used
+### Screen sizes used during development
 - Laptop screen: 1920 x 1080
 - PC monitor: 3840 x 2160 (note: some CSS does not work with this screen size)
-- Mobile screen: TBC
+- Mobile screen: 650 x 1900 (Using Chrome Developer Tools)
 
 ## Potential improvements
 - Not including a delete button in the in-depth view of the item for the user's convenience
+- Was not able to shrink the container that displays each book, such that there are 2 columns to make use of the blank space
 - Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
 - Using a book cover API to generate the books' thumbnails rather than being determined by genre
