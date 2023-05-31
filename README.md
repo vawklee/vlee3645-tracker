@@ -13,13 +13,35 @@
 ## Iteration and implementation
 ### Home Page
 ![Mockup of the proposed home page design](documentation/mockups/view_pc.png)
-Mockup of the home page design, featuring columns of books added to the tracker
+Mockup of the home page design, featuring columns of books added to the tracker\
 
 ![Current home page prototype](documentation/prototype/view_flexOff.png)
-Screenshot of the current working prototype's home page. This was done using `display: block` and does not accurately reflect the mockups
+Screenshot of the current working prototype's home page. This was done using `display: block` and does not accurately reflect the mockups\
 
 ![Home page prototype with flexbox active](documentation/prototype/view_flexOn.png)
-A screenshot of the web app using `display: flex` on the container that displays all the books in the tracker
+A screenshot of the web app using `display: flex` on the container that displays all the books in the tracker. The CSS code required to make this version of display work is listed as below:
+```css
+#bookList {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+/* for each item in the list, it displays a rectangle section */
+#bookList > div {
+    list-style-type: none;
+    background-color: #EBD9C7;
+    padding: 10px 10px;
+    margin: 10px;
+    filter: drop-shadow(0px 3px 2px #997245);
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+}
+```
+This is more accurate to my proposed designs and was much more suitable for making use of the available space on the web page, however the nature of flexbox made it difficult to have a consistent style for each book being displayed, as you can see with the bottom row of items having a wider width than the top row of items. Due to this inconsistency, I chose to use `display: block` for the tracker's display to have a much more consistent styling.
 
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
