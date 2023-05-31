@@ -1,5 +1,5 @@
 # DECO2017 Assignment 3 - Book Tracker
-*I logged in on the wrong account at one point, sorry.*
+I logged in on the wrong account at one point, sorry.
 
 ## Deployment procedures
 1. Run `npm install`
@@ -61,10 +61,11 @@ A screenshot of the current working prototype of the in-depth information displa
 ![Screenshot of the current view icon](documentation/prototype/view_icon_new.png)
 > The current view icon
 <br>
+
 Originally, I used a book icon to represent the option to view more information, however, this intention may not be effectively conveyed to the user. Due to this possible confustion, I opted to use the question mark icon due to its more familiar design language that indicates where users should click to find out more information about something on a webpage.
-<br>
+
 The current version of the information view takes up less screen space on the web page, with the intention being to make it less confronting for users to suddenly see a large pop-up on their screen, as well as keep the information more compact and readable by the eyes. The star emojis were added to the rating's heading as a better visual representation of the user's rating of a book.
-<br>
+
 The background blur to create contrast with the other elements on the page was achieved with a `<div>` that is by default not displayed, and can only be activated by the view button or when opening the form. Note that the floating action button is still clickable in the view state, as a shortbut for users that wish to add more books at any time.
 
 ### General method of approach
