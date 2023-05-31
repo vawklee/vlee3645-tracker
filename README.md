@@ -78,11 +78,13 @@ Originally, I used a book icon to represent the option to view more information,
 
 The current version of the information view takes up less screen space on the web page, with the intention being to make it less confronting for users to suddenly see a large pop-up on their screen, as well as keep the information more compact and readable by the eyes. The star emojis were added to the rating's heading as a better visual representation of the user's rating of a book.
 
-The background blur to create contrast with the other elements on the page was achieved with a `<div>` that is by default not displayed, and can only be activated by the view button or when opening the form. Note that the floating action button is still clickable in the view state, as a shortbut for users that wish to add more books at any time.
+The background blur to create contrast with the other elements on the page was achieved with a `<div>` that is by default not displayed, and can only be activated by the view button or when opening the form. Note that the floating action button is still clickable in the view state, as a shortcut for users that wish to add more books at any time.
 
 ### Adding books with the form
+- form is a lot smaller than proposed in the mockups
 
 ### Deleting books from the tracker
+- rather than creating my own pop-up, I utilised the existing window alerts for browsers: Why?
 
 ## Testing
 **Optimal screen size for viewing**
