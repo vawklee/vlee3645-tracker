@@ -45,6 +45,7 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 - Mobile screen: 650 x 1900 (Using Chrome Developer Tools)
 
 ## Potential improvements
+- Webpage is not completely responsive outside of the optimal laptop screen and mobile screen; CSS styling issues persisted with using relative values
 - Not including a delete button in the in-depth view of the item for the user's convenience
 - Was not able to shrink the container that displays each book, such that there are 2 columns to make use of the blank space
 - Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around

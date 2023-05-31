@@ -61,7 +61,7 @@ body {
 }
 
 /* SOURCE: How To Create a Fixed Sidebar. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp */
-main, .form {
+main {
     margin-left: 275px; /* same dimensions as the sidebar, allows content to be seen essentially*/
     padding: 0px 25px;
 }
@@ -92,30 +92,41 @@ main, .form {
     transform: scale(1.1);
 }
 
-/* positioning of the book adding form */
-.form {
+/* positioning of the book adding form container */
+.formContainer {
     display: none;
+    border: red solid 2px;
     position: fixed;
-    top: 25%;
+    top: 15%;
     left: 25%;
     z-index: 9;
-}
-
-#bookForm {
     max-width: 750px;
-    padding: 20px;
-    background-color: #EBD9C7;
-    filter: drop-shadow(0px 3px 2px #997245);
+    margin-left: 180px;
 }
 
 form {
     font-size: larger;
+    width: 550px;
+    padding: 25px;
+    background-color: #EBD9C7;
+    filter: drop-shadow(0px 3px 2px #997245);
 }
 
-form input, form select {
+form label {
+    /* display: inline-block; */
+    padding-right: 20px;
+    /* margin-right: 50px; */
+}
+
+.radioLabel {
+    font-style: italic;
+}
+
+form input[type=text], form input[type=number], form select {
     margin: 10px 0px;
     padding: 10px 10px;
     /* background-color: #EBD9C7; */
+    width: 500px;
 }
 
 #bookForm #closeBookButton {
@@ -276,13 +287,13 @@ form input, form select {
         align-items: flex-end;
     }
 
-    main, .form {
+    main, .formContainer {
         margin-left: 0px;
         margin-top: 135px; /* same dimensions as the sidebar, allows content to be seen essentially*/
         padding: 20px 20px;
     }
 
-    .form {
+    .formContainer {
         margin-top: 15px;
     }
 

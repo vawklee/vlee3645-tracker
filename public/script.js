@@ -30,7 +30,7 @@ function displayBooks() {
     // displaying each book added to the tracker, as long as they exist
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
-            // images set based on format of the book from a thumbnails folder
+            // images and alt text set based on format of the book from a thumbnails folder
             let thumbnailSrc = null;
             let altText = "";
             switch (book.format) {
@@ -87,6 +87,7 @@ function displayBooks() {
             let buttonContainer = document.createElement('div');
             buttonContainer.className = "buttonContainer";
 
+            // creating a button to view more information; clicking on the whole item is not working as intended
             let viewButton = document.createElement('a');
             viewButton.className = "viewButton";
             let viewIcon = new Image();
@@ -104,6 +105,7 @@ function displayBooks() {
             // item.appendChild(viewButton);
             // item.appendChild(delButton); // delete button is attached to each book item
 
+            // appending clickable buttons to a container for CSS
             buttonContainer.appendChild(viewButton);
             buttonContainer.appendChild(delButton);
             item.appendChild(buttonContainer);
@@ -295,6 +297,7 @@ form.addEventListener('submit', function(event) {
         statusValue,
         form.elements.rating.value
     )
+    console.log(form.elements);
 
     form.reset();
     document.getElementById('formContainer').style.display = "none"; // closes the form once the book is added
