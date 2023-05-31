@@ -2,8 +2,9 @@
 *I logged in on the wrong account at one point, sorry.*
 
 ## Deployment procedures
-1. run `npm install`
-2. run `npm run dev`
+1. Run `npm install`
+2. Run `npm run dev`
+3. View on http://localhost:1234/
 
 ## To-Do [Delete later]
 - responsiveness for mobile
@@ -100,6 +101,8 @@ Harms, N. (2022). Top 10 Book Formats All Writers Should Know. _Become a Writer 
 _How To Create a Fixed Sidebar_. (n.d.). https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 
 _How To Create a Popup Form With CSS_. (n.d.). https://www.w3schools.com/howto/howto_js_popup_form.asp
+
+_How To Hide Arrows From Number Input_. (n.d.). https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
 
 Klutsch, B. (2019). _pile of books_. [Photograph]. unsplash.com. https://unsplash.com/photos/nE2HV5AUXFo 
 

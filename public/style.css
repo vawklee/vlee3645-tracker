@@ -37,6 +37,7 @@ body {
     color: #FCF8F4;
     padding-top: 25px;
     padding-bottom: 75px;
+    font-size: xx-large;
 }
 
 /* sidebar tab styling */
@@ -90,6 +91,7 @@ main {
 /* visual cue for interactivity when cursor hovers over the button */
 .openForm:hover, .viewButton img:hover, .delButton img:hover, #closeBookButton:hover, #submitButton:hover {
     transform: scale(1.1);
+    transition: 0.05s;
 }
 
 /* positioning of the book adding form container */
@@ -118,14 +120,38 @@ form label {
 }
 
 .radioLabel {
-    font-style: italic;
+    font-size: large;
+    color: #743B3B;
+}
+
+input[type=radio] {
+    width: 20px;
+    height: 20px;
 }
 
 form input[type=text], form input[type=number], form select {
     margin: 10px 0px;
     padding: 10px 10px;
-    /* background-color: #EBD9C7; */
+    background-color: #FCF8F4;
+    color: #743B3B;
+    font-size: medium;
     width: 500px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: #997245 solid 2px;
+}
+
+/* SOURCE: How To Hide Arrows From Number Input. (n.d.). https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* removes the number input arrows in the form */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 #bookForm #closeBookButton {
@@ -231,7 +257,7 @@ form input[type=text], form input[type=number], form select {
     left: 25%;
 }
 
-#viewThumbnail, #bookDescription, #closeViewButton {
+#viewThumbnail, #closeViewButton {
     margin: 10px 10px;
 }
 
@@ -242,8 +268,8 @@ form input[type=text], form input[type=number], form select {
 /* all of the book information */
 #bookDescription {
     display: none;
-    margin: auto 15px;
-    font-size: large;
+    margin: auto 25px;
+    font-size: larger;
 }
 
 #closeViewButton {

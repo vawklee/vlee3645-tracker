@@ -30,23 +30,23 @@
             <!-- form for adding a book to the tracker, is not visible until you click the button 'add book' -->
             <form id="bookForm">
                 <label for="title">
-                    Title
-                    <br><input required type="text" name="title" id="title" value="">
+                    Title *
+                    <br><input required type="text" name="title" id="title" value="" placeholder="e.g. Design Think Make Break Repeat">
                 </label><br>
 
                 <label for="author">
-                    Author's name
-                    <br><input required type="text" name="author" id="author" value="">
+                    Author's name *
+                    <br><input required type="text" name="author" id="author" value="" placeholder="e.g. John Doe">
                 </label><br>
 
                 <label for="year">
-                    Publication year
-                    <br><input required type="number" name="year" id="year" value="">
+                    Publication year *
+                    <br><input required type="number" name="year" id="year" value="" min="0" placeholder="e.g. 2023">
                 </label><br>
 
                 <!-- a very long list of genres to provide a variety of options for the user, sourced from https://reference.yourdictionary.com/books-literature/different-types-of-books.html -->
                 <label for="genre">
-                    Genre
+                    Genre *
                     <br><select required name="genre" id="genre">
                         <!-- split into option groups for better categorisation between Fiction and Non-fiction -->
                         <optgroup label="FICTION">
@@ -63,6 +63,7 @@
                             <option value="Drama">Drama</option>
                             <option value="Fairytale">Fairytale</option>
                             <option value="Fantasy">Fantasy</option>
+                            <option value="Fiction" selected>Fiction</option>
                             <option value="Graphic">Graphic novel</option>
                             <option value="Historical Fiction">Historical fiction</option>
                             <option value="Horror">Horror</option>
@@ -73,12 +74,12 @@
                             <option value="Political Thriller">Political thriller</option>
                             <option value="Romance">Romance</option>
                             <option value="Satire">Satire</option>
-                            <option value="Scifi">Science fiction</option>
-                            <option value="ShortStory">Short story</option>
+                            <option value="Science Fiction">Science fiction</option>
+                            <option value="Short Story">Short story</option>
                             <option value="Suspense">Suspence</option>
                             <option value="Thriller">Thriller</option>
                             <option value="Western">Western</option>
-                            <option value="YoungAdult">Young adult</option>
+                            <option value="Young Adult">Young adult</option>
                         </optgroup>
                         <optgroup label="NON-FICTION">
                             <option value="Art">Art</option>
@@ -118,13 +119,13 @@
 
                 <!-- list of common languages sourced from https://journal.lib.uoguelph.ca/index.php/perj/article/view/826/1358; There are infinitely more languages but it makes the selection absurdly long -->
                 <label for="language">
-                    Language
+                    Language *
                     <br><select required name="language" id="language">
                         <option value="Arabic">Arabic</option>
                         <option value="Chinese Simplified">Chinese (Simplified)</option>
                         <option value="Chinese Traditional">Chinese (Traditional)</option>
                         <option value="Dutch">Dutch</option>
-                        <option value="English">English</option>
+                        <option value="English" selected>English</option>
                         <option value="French">French</option>
                         <option value="German">German</option>
                         <option value="Hindi">Hindi</option>
@@ -140,19 +141,19 @@
 
                 <!-- list of book formats sourced from https://becomeawritertoday.com/book-formats/ -->
                 <label for="format">
-                    Format
+                    Format *
                     <br><select required name="format" id="format">
                         <option value="Audiobook">Audiobook</option>
                         <option value="E-book">E-Book</option>
                         <option value="Hardcover">Hardcover</option>
                         <option value="Kindle">Kindle</option>
                         <option value="Manuscript">Manuscript</option>
-                        <option value="Paperback">Paperback</option>
+                        <option value="Paperback" selected>Paperback</option>
                         <option value="Photobook">Photobook</option>
                     </select>
                 </label><br>
 
-                <br><label for="status">Status</label>
+                <br><label for="status">Status *</label>
                 <input type="radio" id="planning" name="status" value="Planning to read">
                 <label class="radioLabel" for="planning">Planning to read</label>
                 <input type="radio" id="reading" name="status" value="Reading">

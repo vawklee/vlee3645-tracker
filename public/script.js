@@ -175,14 +175,14 @@ function displayBooks() {
 
                 let deepInfo = document.getElementById('bookDescription');
                 deepInfo.innerHTML = `<p>
-                <strong>Title:</strong> ${book.title}<br><br>
-                <strong>Author:</strong> ${book.author}<br><br>
-                <strong>Publication year:</strong> ${book.year}<br><br>
-                <strong>Genre:</strong> ${book.genre}<br><br>
-                <strong>Language:</strong> ${book.language}<br><br>
-                <strong>Format:</strong> ${book.format}<br><br>
-                <strong>Status:</strong> ${book.status}<br><br>
-                <strong>Rating:</strong> ${ratingStars}
+                <strong>Title |</strong>&nbsp; ${book.title}<br><br>
+                <strong>Author |</strong>&nbsp; ${book.author}<br><br>
+                <strong>Publication year |</strong>&nbsp; ${book.year}<br><br>
+                <strong>Genre |</strong>&nbsp; ${book.genre}<br><br>
+                <strong>Language |</strong>&nbsp; ${book.language}<br><br>
+                <strong>Format |</strong>&nbsp; ${book.format}<br><br>
+                <strong>Status |</strong>&nbsp; ${book.status}<br><br>
+                <strong>Rating |</strong>&nbsp; ${ratingStars}
                 </p>`;
 
                 let closeView = document.getElementById('closeViewButton');
@@ -251,6 +251,8 @@ function addBook(title, author, year, genre, language, format, status, rating) {
 // displays the form after the 'add book' button is clicked
 var openButton = document.getElementById('addBookButton');
 openButton.addEventListener('click', function() {
+    document.getElementById('moreInformation').style.display = "none"; // closes in-depth view if user adds a book while in that view
+
     // displays the form after the 'cancel' button is clicked 
     var closeButton = document.getElementById('closeBookButton');
     closeButton.addEventListener('click', function(event) {
