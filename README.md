@@ -8,10 +8,22 @@ I logged in on the wrong account at one point, sorry.
 
 ## To-Do [Delete later]
 - responsiveness for mobile
-- delete button when in in-depth view
-- style the form better?
 
 ## Iteration and implementation
+### General method of approach
+1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
+2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner
+3. Using example items added to an array in JS, styled the visuals of each item in the tracking app with CSS
+4. Implemented the use of localstorage in JS to save user's tracked items on the browser
+5. Most of the CSS styling was applied later, along with a responsive mobile version
+
+### Creating the pop-up form
+1. Wrote out the HTML for all the form elements
+2. General CSS for spacing of input boxes
+3. Scripted the 'Add book' and 'Cancel' buttons
+4. localstorage and JSON parsing is now working; items are saved on the browser
+5. CSS for the pop up form was updated; now includes an opaque div for a background blur to accentuate the form's presence on the screen
+
 ### Home Page
 ![Mockup of the proposed home page design](documentation/mockups/view_pc.png)
 Mockup of the home page design, featuring columns of books added to the tracker
@@ -68,19 +80,9 @@ The current version of the information view takes up less screen space on the we
 
 The background blur to create contrast with the other elements on the page was achieved with a `<div>` that is by default not displayed, and can only be activated by the view button or when opening the form. Note that the floating action button is still clickable in the view state, as a shortbut for users that wish to add more books at any time.
 
-### General method of approach
-1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
-2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner
-3. Using example items added to an array in JS, styled the visuals of each item in the tracking app with CSS
-4. Implemented the use of localstorage in JS to save user's tracked items on the browser
-5. Most of the CSS styling was applied later, along with a responsive mobile version
+### Adding books with the form
 
-### Creating the pop-up form
-1. Wrote out the HTML for all the form elements
-2. General CSS for spacing of input boxes
-3. Scripted the 'Add book' and 'Cancel' buttons
-4. localstorage and JSON parsing is now working; items are saved on the browser
-5. CSS for the pop up form was updated; now includes an opaque div for a background blur to accentuate the form's presence on the screen
+### Deleting books from the tracker
 
 ## Testing
 **Optimal screen size for viewing**
@@ -101,6 +103,7 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 ## Potential improvements
 - Webpage is not completely responsive outside of the optimal laptop screen and mobile screen; CSS styling issues persisted with using relative values
 - Not including a delete button in the in-depth view of the item for the user's convenience
+- A delete button could be implemented to the in-depth view for ease of access
 - Was not able to shrink the container that displays each book, such that there are 2 columns to make use of the blank space
 - Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around
 - Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
