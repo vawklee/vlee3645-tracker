@@ -30,7 +30,7 @@ function displayBooks() {
     // displaying each book added to the tracker, as long as they exist
     if (localBooks !== null) {
         localBooks.forEach(function(book) {
-            // images and alt text set based on format of the book from a thumbnails folder
+            // setting images and alt text based on format of the book from a thumbnails folder
             let thumbnailSrc = null;
             let altText = "";
             switch (book.format) {
@@ -147,8 +147,8 @@ function displayBooks() {
 
                 // &#11088; HTML code for the yellow star emoji
                 // &#11089; HTML code for the small black star
+                // generates a string with the appropriate rating for visual appeal
                 let ratingStars = "";
-
                 switch (book.rating) {
                     case "0":
                         ratingStars = "⭑ ⭑ ⭑ ⭑ ⭑";
@@ -297,7 +297,7 @@ form.addEventListener('submit', function(event) {
         statusValue,
         form.elements.rating.value
     )
-    console.log(form.elements);
+    // console.log(form.elements);
 
     form.reset();
     document.getElementById('formContainer').style.display = "none"; // closes the form once the book is added

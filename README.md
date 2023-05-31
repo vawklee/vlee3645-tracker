@@ -11,8 +11,15 @@
 - style the form better?
 
 ## Iteration and implementation
-### Landing Page
+### Home Page
+![Mockup of the proposed home page design](documentation/mockups/view_pc.png)
+Mockup of the home page design, featuring columns of books added to the tracker
 
+![Current home page prototype](documentation/prototype/view_flexOff.png)
+Screenshot of the current working prototype's home page. This was done using `display: block` and does not accurately reflect the mockups
+
+![Home page prototype with flexbox active](documentation/prototype/view_flexOn.png)
+A screenshot of the web app using `display: flex` on the container that displays all the books in the tracker
 
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options

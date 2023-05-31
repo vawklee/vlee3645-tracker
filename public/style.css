@@ -95,7 +95,6 @@ main {
 /* positioning of the book adding form container */
 .formContainer {
     display: none;
-    border: red solid 2px;
     position: fixed;
     top: 15%;
     left: 25%;
