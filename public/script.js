@@ -113,7 +113,7 @@ function displayBooks() {
             delButton.addEventListener('click', function() {
                 // pop up to confirm the user's action, ensures no accidental deletes
                 // deletes book from storage and displayed list
-                if (confirm("Are you sure you want to delete this item?")) {
+                if (confirm("Are you sure you want to delete this item?\nThis will permanently remove the book from the tracker.")) {
                     localBooks.forEach(function(arrayElement, arrayIndex) {
                         if (arrayElement.id == item.getAttribute('data-id')) {
                             localBooks.splice(arrayIndex, 1);
