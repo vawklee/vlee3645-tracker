@@ -21,8 +21,6 @@ I logged in on the wrong account at one point, sorry.
 Desktop: 1920 x 1080
 <br>
 Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 100%)
-<br>
-Tablet: 768 x 1024 (iPad Mini in Google Chrome Developer Tools @ 100%)
 
 **Note**: CSS may not have desired effects outside of the optimal screen sizes listed above.
 
@@ -167,6 +165,7 @@ I used `confirm("Are you sure you want to delete this item?")` to create a brows
 
 ## Future improvements <a id="improvements"></a>
 - The webpage is not completely responsive outside of the optimal laptop screen and mobile screen listed above; CSS styling issues persisted with using relative values over absolute values
+- Implementation of responsive CSS for tablet sized screens; Currently only laptop and mobile screens have responsive css
 - A delete button should be included in the in-depth view of a book's information for the user's ease of access, reducing the amount of steps required to delete a book once they view the information
 - In the desktop version, the containers that displays each book should be styled to be smaller and more compact such that there are 2 columns to make use of the blank space; possible with the use of flexbox but there are still undesired effects when attempted in this current prototype
 - The view button is currently a work around for getting more information about a book; The desired effect was having the user click anywhere on the container to view more information, however the eventlistener confuses a viewing click for a deleting click when clicking the appropriate delete button location
