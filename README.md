@@ -2,20 +2,20 @@
 I logged in on the wrong account at one point, sorry.
 
 ## Table of Contents:
-1. Set-up and deployment procedures
-2. Testing specifications
-3. Iteration and discussion of implementation
-4. Improvements to be made
-5. Reference list
+1. [Set-up and deployment procedures](#setupAndDeploy)
+2. [Testing specifications](#testingSpecs)
+3. [Iteration and discussion of implementation](#iteration)
+4. [Improvements to be made](#improvements)
+5. [Reference list](#referenceList)
 
-## How to set up and deploy on a local machine
+## How to set up and deploy on a local machine <a id="setupAndDeploy"></a>
 1. Install Node.js
 2. Clone the [GitHub repository](https://github.com/vawklee/vlee3645-tracker.git)
 3. Using the terminal, run `npm install` to install all dependencies
 4. Using the terminal, run `npm run dev` to start the web server
 5. View on a web browser at http://localhost:1234/ (port number may vary)
 
-## Testing specifications
+## Testing specifications <a id="testingSpecs"></a>
 **Optimal screen sizes for viewing**
 <br>
 Desktop: 1920 x 1080
@@ -35,7 +35,7 @@ Tablet: 768 x 1024 (iPad Mini in Google Chrome Developer Tools @ 100%)
 - PC monitor: 3840 x 2160 (note: CSS may not work optimally with this screen size)
 - Mobile screen: 412 x 915 (Using Chrome Developer Tools)
 
-## Iteration and implementation
+## Iteration and implementation <a id="iteration"></a>
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
 2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner
@@ -140,23 +140,42 @@ The mobile prototype remains largely the same as the mockup, with the main diffe
 
 ### Adding books with the form
 #### DESKTOP
-- form is a lot smaller than proposed in the mockups
+![Mockup of the book adding form](documentation/mockups/form_pc.png)
+> Mockup of the form used to add books
+
+![Screenshot of the current form prototype](documentation/prototype/form_pc.png)
+The size of the form has drastically changed from the mockup, with the current working prototype being much smaller and vertical. By doing this with `<br>` linebreaks, it created a much cleaner view and represents the flow of user action down the page towards the submit or cancel button. The smaller size of the form prototype appears less overwhelming to users as they are not surprised with a large bright pop-up when clicking the floating action button. 
+
+Based on tutor feedback, I opted for less colourways in the prototype with clearer colour coding of the cancel button in red to better signify to the users what the buttons do when clicked.
+
+#### MOBILE
+![Mockup of the book adding form on mobile](documentation/mockups/form_mobile.png)
+> Mockup of the mobile version of the tracking form
+
+![Screenshot of the working form on mobile screens](documentation/prototype/form_mobile.png)
+Similar to the changes done to the desktop version of this tracking form, there is now a separation of the label and input fields on the mobile prototype to better indicate to the user what information is required as well as providing default selections in the dropdown menu for the most common type of inputs.
 
 ### Deleting books from the tracker
-- rather than creating my own pop-up, I utilised the existing window alerts for browsers: Why?
+#### DESKTOP & MOBILE
+![Mockup of the action of deleting an item from the tracker](documentation/mockups/confirm_delete.png)
+> Mockup of the pop-up that confirms the user's action when deleting an item from the tracker
 
-## Potential improvements
-- Webpage is not completely responsive outside of the optimal laptop screen and mobile screen; CSS styling issues persisted with using relative values
-- Not including a delete button in the in-depth view of the item for the user's convenience
-- A delete button could be implemented to the in-depth view for ease of access
-- Was not able to shrink the container that displays each book, such that there are 2 columns to make use of the blank space
-- Wasn't able to get clicking on the item itself to view the item working; using a view button as a work around
-- Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres; there were just too many genres to count
-- Using a book cover API to generate the books' thumbnails rather than being determined by genre
-- Changing the sidebar to be more responsive by using view width and height; had difficulties with formatting the list display to respond the same as the sidebar
-- A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/ but the time constraints for this code haven't allowed me to integrate that list 
+![Screenshot of the browser's alert message when deletign an item](documentation/prototype/confirm_delete.png)
+> Screenshot of the in-built browser alert when trying to delete a book
 
-## Reference List (APA 7th)
+I used `confirm("Are you sure you want to delete this item?")` to create a browser alert pop-up rather than creating my own stylised pop-up due to its ease of implementation. While it would suit the colour theme of the web app much better if there was a pop-up element created in JavaScript, `confirm()` easily verified the user's confirmation (`True`) or cancellation (`False`) when trying to delete a book from the tracker as it would not perform other browser actions until the alert is completed. The use of this in-built browser alert was much smoother than the need for multiple eventlisteners on the cancel and submit buttons created from a stylised pop-up.
+
+## Future improvements <a id="improvements"></a>
+- The webpage is not completely responsive outside of the optimal laptop screen and mobile screen listed above; CSS styling issues persisted with using relative values over absolute values
+- A delete button should be included in the in-depth view of a book's information for the user's ease of access, reducing the amount of steps required to delete a book once they view the information
+- In the desktop version, the containers that displays each book should be styled to be smaller and more compact such that there are 2 columns to make use of the blank space; possible with the use of flexbox but there are still undesired effects when attempted in this current prototype
+- The view button is currently a work around for getting more information about a book; The desired effect was having the user click anywhere on the container to view more information, however the eventlistener confuses a viewing click for a deleting click when clicking the appropriate delete button location
+- Due to time constraints for this assignment, thumbnails were determined by the format of the book being added to the tracker rather than using the genres as proposed in my mockups; there were just too many genres to count when inmplementing the tracking form
+- A possible solution to the above would be integrating an existing book cover API to generate the books' thumbnails based on their title, rather than generation based on format or genre, or allowing users to import their own images onto the website
+- Changing the sidebar to be more responsive by using view width and height; there are some difficulties with formatting the list display to respond the same way as the sidebar as it is currently separated by margins in CSS
+- A more extensive list of languages, sourced from https://www.dynamiclanguage.com/list-of-languages/, should be integrated into the tracking form but the time constraints for this assignment as well as the possible length of the dropdown menu has resulted in the use of a list of common literary languages
+
+## Reference List (APA 7th) <a id="referenceList"></a>
 
 Agency, T. (2018). _flat lay photography of opened book_. [Photograph]. unsplash.com. https://unsplash.com/photos/Q8otix2SVko 
 
