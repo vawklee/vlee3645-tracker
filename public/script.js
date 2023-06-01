@@ -202,11 +202,12 @@ function displayBooks() {
         // creation of welcome message to get users started
         let item = document.createElement('div');
         let information = document.createElement('p');
-        information.innerHTML = `<p>Welcome to bookMarker!<br><br>To get started, click the red button in the bottom right corner of the page</p>`;
+        information.innerHTML = `<p>Welcome to bookMarker!<br><br>To get started, add a book by clicking the red + button in the bottom right corner of the page.</p>`;
 
         item.appendChild(information);
         bookDisplay.appendChild(item);
         item.style.fontSize = "x-large";
+        item.id = "welcomeMessage";
     }
     
     // updates the # items button text (sidebar) based on the amount of books in the localBooks storage array

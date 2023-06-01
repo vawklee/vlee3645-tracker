@@ -150,7 +150,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Firefox */
+/* Firefox; don't know why there is a warning */
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -175,7 +175,7 @@ input[type=number] {
     border-radius: 15px;
 }
 
-/* for each item in the list, it displays a rectangle section */
+/* container for each item in the list to show thumbnail and information */
 #bookList > div {
     list-style-type: none;
     background-color: #EBD9C7;
