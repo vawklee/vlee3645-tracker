@@ -100,7 +100,7 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 ### Screen sizes used during development
 - Laptop screen: 1920 x 1080
 - PC monitor: 3840 x 2160 (note: some CSS does not work with this screen size)
-- Mobile screen: 650 x 1900 (Using Chrome Developer Tools)
+- Mobile screen: 412 x 915 (Using Chrome Developer Tools)
 
 ## Potential improvements
 - Webpage is not completely responsive outside of the optimal laptop screen and mobile screen; CSS styling issues persisted with using relative values
