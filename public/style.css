@@ -260,9 +260,6 @@ input[type=number] {
 
 /* CSS for tablet screens */
 @media screen and (min-width: 501) and (max-width: 800) {
-    #sidebar {
-        background-color: red;
-    }
 }
 
 /* CSS for mobile screens */
