@@ -98,7 +98,7 @@ main {
 .formContainer {
     display: none;
     position: fixed;
-    top: 15%;
+    top: 10%;
     left: 25%;
     z-index: 9;
     max-width: 750px;
@@ -119,9 +119,10 @@ form label {
     /* margin-right: 50px; */
 }
 
-.radioLabel {
+.radioContainer {
     font-size: large;
     color: #743B3B;
+    margin-top: 5px;
 }
 
 input[type=radio] {
@@ -200,7 +201,7 @@ input[type=number] {
     background-color: #F2E8DE;
 }
 
-#bookList div img {
+#bookList > div > img {
     margin: 10px 30px 10px 10px;
     /* align-items: center; */
 }
@@ -226,10 +227,10 @@ input[type=number] {
     right: 5px;
 }
 
-#bookList div div a {
+.buttonContainer a {
     width: 50px;
     height: 50px;
-    margin: 25px auto;
+    margin: 25px 10px;
     /* justify-content: right; */
 }
 
@@ -281,7 +282,7 @@ input[type=number] {
 @media screen and (max-width: 750px) {
     #logoSidebar {
         width: auto;
-        height: 50%;
+        height: 45%;
     }
 
     #sidebar {
@@ -298,8 +299,8 @@ input[type=number] {
     #sidebar h1 {
         padding-top: 0px;
         padding-bottom: 0px;
-        margin: 45px 15px 15px 15px;
-        font-size: large;
+        margin: 30px 15px 15px 15px;
+        font-size: medium;
     }
     
     /* tabs are just floating in the middle, not what I was going for */
@@ -338,9 +339,9 @@ input[type=number] {
         margin-top: 10px;
         padding: 5px;
         top: 10%;
-        left: 1%;
+        left: 1.5%;
         z-index: 0; /* ensures that the FAB stays on top */
-        max-width: 400px;
+        width: 400px;
         margin-left: auto;
     }
     
@@ -348,14 +349,9 @@ input[type=number] {
         width: 100%;
         padding: 15px;
     }
-    
-    .radioLabel {
-        font-size: large;
-    }
-    
-    input[type=radio] {
-        width: 20px;
-        height: 20px;
+
+    form label {
+        font-size: medium;
     }
     
     form input[type=text], form input[type=number], form select {
@@ -366,23 +362,16 @@ input[type=number] {
     }
     
     #bookForm #closeBookButton {
-        background-color: #BD4E4E;
-        color: #FCF8F4;
-        margin: 10px 5px 10px 0px;
-        padding: 10px 15px;
+        padding: 8px 15px;
+        margin-bottom: 0px;
     }
     
     /* styling the form buttons */
     #closeBookButton, #submitButton {
-        font-size: large;
-        padding: 10px 15px;
-        text-align: center;
-        /* border: #997245 solid; */
-        border: none;
-        margin-top: 25px;
-        margin-bottom: 5px;
-        filter: drop-shadow(0px 3px 2px #997245);
-        border-radius: 15px;
+        padding: 8px 15px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        border-radius: 10px;
     }
 
     #bookList {
@@ -395,8 +384,6 @@ input[type=number] {
     #bookList > div {
         padding: 10px 10px;
         margin: 5px;
-        filter: drop-shadow(0px 3px 2px #997245);
-        /* display: flex; */
         flex-wrap: wrap;
         flex-grow: 1;
         width: 300px;
@@ -404,14 +391,14 @@ input[type=number] {
         justify-content: center;
     }
     
-    #bookList div img {
-        margin: 5px auto 10px auto;
+    #bookList > div > img {
+        margin: 50px auto 10px auto;
         justify-items: center;
     }
     
     #bookList div p {
         font-size: large;
-        margin: 5px auto auto auto;
+        margin: 5px auto auto 8px;
         justify-content: center;
     }
     
@@ -419,38 +406,30 @@ input[type=number] {
     .buttonContainer {
         margin: auto;
         position: absolute;
-        bottom: 5px;
+        top: 5px;
     }
-    
-    #bookList div div a {
-        width: 50px;
-        height: 50px;
-        margin: 25px auto;
-        /* justify-content: right; */
+
+    /* view and delete icons */
+    .buttonContainer img {
+        width: 35px;
+        height: 35px;
+        margin: 8px 5px;
     }
-    
-    /* blurring the background for contrast when viewing in-depth information */
-    .backgroundBlur {
-        display: none;
-        position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(252, 248, 244, 0.75);
+
+    .buttonContainer a {
+        margin: 25px 0px;
     }
     
     /* for viewing in-depth information about a book */
+    /* MAJORITY ABSOLUTE VALUES BELOW FOR 412 x 915 */
     #moreInformation {
-        display: none;
-        background-color: #EBD9C7;
-        filter: drop-shadow(0px 3px 2px #997245);
         padding: 10px;
         margin-left: 15px;
+        max-width: 385px;
+        height: 80%;
         position: fixed;
-        /* top: 5vh;
-        left: 275; */
-        top: 25%;
-        left: 25%;
+        top: 12%;
+        left: 0%;
     }
     
     #viewThumbnail, #closeViewButton {
@@ -459,17 +438,31 @@ input[type=number] {
     
     #viewThumbnail {
         float: left;
+        height: 250px;
+        margin-top: 40px;
     }
     
-    /* all of the book information */
+    /* paragraph for book information */
     #bookDescription {
         display: none;
-        margin: auto 25px;
+        margin: auto;
+        position: absolute;
+        left: 7%;
+        top: 45%;
+        /* bottom: 3%; */
         font-size: larger;
     }
     
     #closeViewButton {
         display: none;
-        float: right;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    /* the cross icon itself */
+    #closeViewButton img {
+        width: 30px;
+        height: 30px;
     }
 }

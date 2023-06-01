@@ -151,17 +151,25 @@
                         <option value="Paperback" selected>Paperback</option>
                         <option value="Photobook">Photobook</option>
                     </select>
-                </label><br>
+                </label>
+                <br>
 
-                <br><label for="status">Status *</label>
-                <input type="radio" id="planning" name="status" value="Planning to read">
-                <label class="radioLabel" id="planningLabel" for="planning">Planning to read</label>
-                <input type="radio" id="reading" name="status" value="Reading">
-                <label class="radioLabel" id="readingLabel" for="reading">Reading</label>
-                <input type="radio" id="completed" name="status" value="Completed">
-                <label class="radioLabel" id="completedLabel" for="completed">Completed</label><br>
+                <label for="status">Status *</label>
+                <div class="radioContainer">
+                    <input type="radio" id="planning" name="status" value="Planning to read">
+                    <label class="radioLabel" id="planningLabel" for="planning">Planning to read</label>
+                </div>
+                <div class="radioContainer">
+                    <input type="radio" id="reading" name="status" value="Reading">
+                    <label class="radioLabel" id="readingLabel" for="reading">Reading</label>
+                </div>
+                <div class="radioContainer">
+                    <input type="radio" id="completed" name="status" value="Completed">
+                    <label class="radioLabel" id="completedLabel" for="completed">Completed</label>
+                </div>
+                <br>
 
-                <br><label for="rating">
+                <label for="rating">
                     Rating
                     <br><select name="rating" id="rating">
                         <option value="N/A">N/A</option>

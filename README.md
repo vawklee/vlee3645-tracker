@@ -93,6 +93,8 @@ Desktop: 1920 x 1080
 <br>
 Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
 
+Note: CSS does not have desired effects outside of the optimal screen sizes listed above
+
 ### Browsers used for testing and viewing
 - Google Chrome
 - Microsoft Edge
