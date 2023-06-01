@@ -91,7 +91,9 @@ The background blur to create contrast with the other elements on the page was a
 <br>
 Desktop: 1920 x 1080
 <br>
-Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools)
+Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 100%)
+<br>
+Tablet: 768 x 1024 (iPad Mini in Google Chrome Developer Tools @ 100%)
 
 Note: CSS does not have desired effects outside of the optimal screen sizes listed above
 
