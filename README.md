@@ -1,13 +1,37 @@
 # DECO2017 Assignment 3 - Book Tracker
 I logged in on the wrong account at one point, sorry.
 
+## Table of Contents:
+1. Deployment procedures
+2. Testing specifications
+3. Iteration and discussion of implementation
+4. Improvements to be made
+4. Reference list
+
 ## Deployment procedures
 1. Run `npm install`
 2. Run `npm run dev`
 3. View on http://localhost:1234/
 
-## To-Do [Delete later]
-- responsiveness for mobile
+## Testing specifications
+**Optimal screen sizes for viewing**
+<br>
+Desktop: 1920 x 1080
+<br>
+Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 100%)
+<br>
+Tablet: 768 x 1024 (iPad Mini in Google Chrome Developer Tools @ 100%)
+
+Note: CSS does not have desired effects outside of the optimal screen sizes listed above
+
+### Browsers used for testing and viewing
+- Google Chrome
+- Microsoft Edge
+
+### Screen sizes used during development
+- Laptop screen: 1920 x 1080
+- PC monitor: 3840 x 2160 (note: some CSS does not work with this screen size)
+- Mobile screen: 412 x 915 (Using Chrome Developer Tools)
 
 ## Iteration and implementation
 ### General method of approach
@@ -15,23 +39,22 @@ I logged in on the wrong account at one point, sorry.
 2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner
 3. Using example items added to an array in JS, styled the visuals of each item in the tracking app with CSS
 4. Implemented the use of localstorage in JS to save user's tracked items on the browser
-5. Most of the CSS styling was applied later, along with a responsive mobile version
+5. Most of the CSS styling was applied later, along with a responsive mobile version; CSS for visuals was my last priority
 
 ### Creating the pop-up form
 1. Wrote out the HTML for all the form elements
 2. General CSS for spacing of input boxes
 3. Scripted the 'Add book' and 'Cancel' buttons
-4. localstorage and JSON parsing is now working; items are saved on the browser
+4. localstorage and JSON parsing implemented; items are saved on the browser
 5. CSS for the pop up form was updated; now includes an opaque div for a background blur to accentuate the form's presence on the screen
 
 ### Home Page
+#### Desktop browser
 ![Mockup of the proposed home page design](documentation/mockups/view_pc.png)
-Mockup of the home page design, featuring columns of books added to the tracker
-<br>
+> Mockup of the home page design, featuring columns of books added to the tracker
 
 ![Current home page prototype](documentation/prototype/view_flexOff.png)
-Screenshot of the current working prototype's home page. This was done using `display: block` and does not accurately reflect the mockups
-<br>
+> Screenshot of the current working prototype's home page. This was done using `display: block` and does not accurately reflect the mockups
 
 ![Home page prototype with flexbox active](documentation/prototype/view_flexOn.png)
 A screenshot of the web app using `display: flex` on the container that displays all the books in the tracker. The CSS code required to make this version of display work is as follows:
@@ -58,9 +81,21 @@ A screenshot of the web app using `display: flex` on the container that displays
 ```
 This is more accurate to my proposed designs and was much more suitable for making use of the available space on the web page, however the nature of flexbox made it difficult to have a consistent style for each book being displayed, as you can see with the bottom row of items having a wider width than the top row of items. Due to this inconsistency, I chose to use `display: block` for the tracker's display to have a much more consistent styling.
 
+#### Mobile webpage
+![Mockup of the mobile webapp design](documentation/mockups/view_mobile.png)
+> Original mockup of the mobile version of the book tracker.
+
+![Screenshot of an older version of the mobile prototype](documentation/prototype/view_mobile_old.png)
+> Older version of the mobile prototype; Information and delete buttons are presented in a row within a larger container
+
+![Image of the current mobile prototype web app](documentation/prototype/view_mobile.png)
+Screenshot of the current working prototype for mobile screens. The appearance of the top 'navigation' bar has drastically changed from the mockup due to my incomplete understanding off CSS. I struggled to find a way to center the coloured tabs at the bottom of the nav bar container and so I opted to keep them to the right side of the logo and webpage title.
+
+The size of the item containers in mobile view has also been changed from a small horizontal rectangle to a larger vertical rectangle. While this takes up more of the screen space and is not optimal for viewing several items at once in the tracker, it allowed for me to showcase the thumbnail image. [...]
+
 ### Viewing more information
 ![Mockup design of the in-depth information](documentation/mockups/information_pc.png)
-A mockup of the proposed design for viewing all the information available about a tracked item.
+> A mockup of the proposed design for viewing all the information available about a tracked item.
 
 ![Current prototype of the in-depth information view](documentation/prototype/information_pc.png)
 A screenshot of the current working prototype of the in-depth information display about a book the user clicks on. Due to some limitations with eventlisteners in JavaScript, I was not able to make the book information viewable with a simple click of the item, as the eventlistener will confuse clicking the delete button with clicking the item to view; for this reason, I added the view button (represented by a question icon) for users to click when they want to see more information.
@@ -68,11 +103,9 @@ A screenshot of the current working prototype of the in-depth information displa
 
 ![Screenshot of the old view icon](documentation/prototype/view_icon_old.png)
 > The old view icon
-<br>
 
 ![Screenshot of the current view icon](documentation/prototype/view_icon_new.png)
 > The current view icon
-<br>
 
 Originally, I used a book icon to represent the option to view more information, however, this intention may not be effectively conveyed to the user. Due to this possible confustion, I opted to use the question mark icon due to its more familiar design language that indicates where users should click to find out more information about something on a webpage.
 
@@ -85,26 +118,6 @@ The background blur to create contrast with the other elements on the page was a
 
 ### Deleting books from the tracker
 - rather than creating my own pop-up, I utilised the existing window alerts for browsers: Why?
-
-## Testing
-**Optimal screen size for viewing**
-<br>
-Desktop: 1920 x 1080
-<br>
-Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 100%)
-<br>
-Tablet: 768 x 1024 (iPad Mini in Google Chrome Developer Tools @ 100%)
-
-Note: CSS does not have desired effects outside of the optimal screen sizes listed above
-
-### Browsers used for testing and viewing
-- Google Chrome
-- Microsoft Edge
-
-### Screen sizes used during development
-- Laptop screen: 1920 x 1080
-- PC monitor: 3840 x 2160 (note: some CSS does not work with this screen size)
-- Mobile screen: 412 x 915 (Using Chrome Developer Tools)
 
 ## Potential improvements
 - Webpage is not completely responsive outside of the optimal laptop screen and mobile screen; CSS styling issues persisted with using relative values

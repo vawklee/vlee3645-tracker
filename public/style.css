@@ -167,7 +167,7 @@ input[type=number] {
     font-size: large;
     padding: 10px 15px;
     text-align: center;
-    /* border: #997245 solid; */
+    color: #3F0808;
     border: none;
     margin-top: 25px;
     margin-bottom: 5px;
