@@ -175,13 +175,6 @@ input[type=number] {
     border-radius: 15px;
 }
 
-/* display flex for smaller containers, more compact view of items in the tracker */
-/* #bookList {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-} */
-
 /* for each item in the list, it displays a rectangle section */
 #bookList > div {
     list-style-type: none;
@@ -190,11 +183,6 @@ input[type=number] {
     margin: 10px;
     filter: drop-shadow(0px 3px 2px #997245);
     display: flex;
-    /* flex-wrap: wrap;
-    flex-grow: 1;
-    width: 300px;
-    height: 500px;
-    justify-content: center; */
 }
 
 #bookList div:hover {
@@ -211,14 +199,6 @@ input[type=number] {
     margin: 25px 25px 5px 5px;
     /* justify-content: center; */
 }
-
-/* old CSS for close & view buttons when they weren't appended to a container of their own */
-/* #bookList div a {
-    width: 50px;
-    height: 50px;
-    margin: 25px 15px;
-    /* justify-content: right;
-} */
 
 /* contains the view and close button */
 .buttonContainer {
@@ -391,6 +371,7 @@ input[type=number] {
         justify-content: center;
     }
     
+    /* the thumbnail image itself, bumped down with margin-top to give room for buttons */
     #bookList > div > img {
         margin: 50px auto 10px auto;
         justify-items: center;
@@ -402,7 +383,7 @@ input[type=number] {
         justify-content: center;
     }
     
-    /* contains the view and close button */
+    /* keeps the view and delete button in the top right corner of the rectangle */
     .buttonContainer {
         margin: auto;
         position: absolute;
