@@ -76,7 +76,7 @@ function displayBooks() {
 
             // creation of quick view information
             let information = document.createElement('p');
-            information.innerHTML = `<p><strong>${book.title}</strong><br><br>Written by ${book.author}<br><br>${book.status}<br><br>Date added: ${book.date}</p>`;
+            information.innerHTML = `<p><strong>${book.title}</strong><br><br>Written by ${book.author}<br><br>${book.status}<br><br>Added on ${book.date}</p>`;
 
             item.appendChild(cover);
             item.appendChild(information);
@@ -182,6 +182,7 @@ function displayBooks() {
                 <strong>Language |</strong>&nbsp; ${book.language}<br><br>
                 <strong>Format |</strong>&nbsp; ${book.format}<br><br>
                 <strong>Status |</strong>&nbsp; ${book.status}<br><br>
+                <strong>Date added |</strong>&nbsp; ${book.date}<br><br>
                 <strong>Rating |</strong>&nbsp; ${ratingStars}
                 </p>`;
 
