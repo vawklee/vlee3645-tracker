@@ -277,6 +277,7 @@ input[type=number] {
     float: right;
 }
 
+/* CSS for mobile screens */
 @media screen and (max-width: 750px) {
     #logoSidebar {
         width: auto;
@@ -284,11 +285,11 @@ input[type=number] {
     }
 
     #sidebar {
-        height: 135px;
+        height: 95px; /* temporary absolute values for 412 x 915 */
         width: 100%;
         overflow-y: hidden;
-        padding-top: 15px;
-        padding-left: 25px;
+        padding-top: 10px;
+        padding-left: 15px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -297,35 +298,178 @@ input[type=number] {
     #sidebar h1 {
         padding-top: 0px;
         padding-bottom: 0px;
-        margin: 15px;
+        margin: 45px 15px 15px 15px;
+        font-size: large;
     }
     
     /* tabs are just floating in the middle, not what I was going for */
     #sidebar a {
-        font-size: 25px;
+        font-size: large;
         font-weight: bolder;
-        text-decoration: none;
-        background-color: #FCF8F4;
-        padding: 15px 25px 15px 25px; /* top right bottom left */
+        padding: 15px 20px 15px 20px; /* top right bottom left */
         border-radius: 10px 10px 0px 0px; /* top-left top-right bottom-right bottom-left */
         margin-left: 0px;
-        align-items: flex-end;
+        margin-top: 45px; /* temporary absolute values for 412 x 915 */
+        z-index: 20;
     }
 
     main, .formContainer {
         margin-left: 0px;
-        margin-top: 135px; /* same dimensions as the sidebar, allows content to be seen essentially*/
+        margin-top: 95px; /* same dimensions as the sidebar, allows content to be seen essentially*/
         padding: 20px 20px;
     }
 
-    .formContainer {
-        margin-top: 15px;
+    /* floating action button to open form */
+    .openForm {
+        width: 50px;
+        height: 50px;
+        border-radius: 15px;
+        bottom: 10px;
+        right: 10px;
     }
 
-    form input, form select {
-        width: 400px;
-        display: flex;
-        /* justify-content: flex-end; */
+    .openForm img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    /* positioning of the book adding form container */
+    .formContainer {
+        margin-top: 10px;
+        padding: 5px;
+        top: 10%;
+        left: 1%;
+        z-index: 0; /* ensures that the FAB stays on top */
+        max-width: 400px;
+        margin-left: auto;
+    }
+    
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .radioLabel {
+        font-size: large;
+    }
+    
+    input[type=radio] {
+        width: 20px;
+        height: 20px;
+    }
+    
+    form input[type=text], form input[type=number], form select {
         flex-wrap: nowrap;
+        margin: 10px 0px;
+        padding: 10px 10px;
+        width: 100%;
+    }
+    
+    #bookForm #closeBookButton {
+        background-color: #BD4E4E;
+        color: #FCF8F4;
+        margin: 10px 5px 10px 0px;
+        padding: 10px 15px;
+    }
+    
+    /* styling the form buttons */
+    #closeBookButton, #submitButton {
+        font-size: large;
+        padding: 10px 15px;
+        text-align: center;
+        /* border: #997245 solid; */
+        border: none;
+        margin-top: 25px;
+        margin-bottom: 5px;
+        filter: drop-shadow(0px 3px 2px #997245);
+        border-radius: 15px;
+    }
+
+    #bookList {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    /* for each item in the list, it displays a rectangle section */
+    #bookList > div {
+        padding: 10px 10px;
+        margin: 5px;
+        filter: drop-shadow(0px 3px 2px #997245);
+        /* display: flex; */
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 300px;
+        height: 500px;
+        justify-content: center;
+    }
+    
+    #bookList div img {
+        margin: 5px auto 10px auto;
+        justify-items: center;
+    }
+    
+    #bookList div p {
+        font-size: large;
+        margin: 5px auto auto auto;
+        justify-content: center;
+    }
+    
+    /* contains the view and close button */
+    .buttonContainer {
+        margin: auto;
+        position: absolute;
+        bottom: 5px;
+    }
+    
+    #bookList div div a {
+        width: 50px;
+        height: 50px;
+        margin: 25px auto;
+        /* justify-content: right; */
+    }
+    
+    /* blurring the background for contrast when viewing in-depth information */
+    .backgroundBlur {
+        display: none;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(252, 248, 244, 0.75);
+    }
+    
+    /* for viewing in-depth information about a book */
+    #moreInformation {
+        display: none;
+        background-color: #EBD9C7;
+        filter: drop-shadow(0px 3px 2px #997245);
+        padding: 10px;
+        margin-left: 15px;
+        position: fixed;
+        /* top: 5vh;
+        left: 275; */
+        top: 25%;
+        left: 25%;
+    }
+    
+    #viewThumbnail, #closeViewButton {
+        margin: 10px 10px;
+    }
+    
+    #viewThumbnail {
+        float: left;
+    }
+    
+    /* all of the book information */
+    #bookDescription {
+        display: none;
+        margin: auto 25px;
+        font-size: larger;
+    }
+    
+    #closeViewButton {
+        display: none;
+        float: right;
     }
 }
