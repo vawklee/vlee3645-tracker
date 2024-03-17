@@ -1,5 +1,4 @@
 # DECO2017 Assignment 3 - Book Tracker Prototype
-I logged in on the wrong account at one point, sorry.
 
 ## Table of Contents:
 1. [Set-up and deployment procedures](#setupAndDeploy)
