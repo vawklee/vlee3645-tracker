@@ -19,7 +19,7 @@
 <br>
 Desktop: 1920 x 1080
 <br>
-Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 100%)
+Mobile: 390 x 844 (iPhone 12 in Developer Tools @ 100%)
 
 **Note**: CSS may not have desired effects outside of the optimal screen sizes listed above.
 
@@ -30,9 +30,9 @@ Mobile: 412 x 915 (Samsung Galaxy S20 Ultra in Google Chrome Developer Tools @ 1
 ### Screen sizes used during development
 - Laptop screen: 1920 x 1080
 - PC monitor: 3840 x 2160 (note: CSS may not work optimally with this screen size)
-- Mobile screen: 412 x 915 (Using Chrome Developer Tools)
+- Mobile screen: 390 x 844 (Using Chrome Developer Tools)
 
-## Iteration and implementation <a id="iteration"></a>
+## Iteration and implementation (Assignment specific documentation) <a id="iteration"></a>
 ### General method of approach
 1. Formed a basic HTML layout, containing the sidebar and the form's input and selection options
 2. Added JavaScript to create the action of using the tracking form with a floating action button in the bottom right corner

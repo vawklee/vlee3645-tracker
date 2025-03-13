@@ -264,7 +264,7 @@ input[type=number] {
 }
 
 /* CSS for mobile screens */
-@media screen and (max-width: 500) {
+@media screen and (max-width: 480) {
     #logoSidebar {
         width: auto;
         height: 45%;
@@ -333,7 +333,7 @@ input[type=number] {
     
     form {
         width: 100%;
-        padding: 15px;
+        padding: 10px;
     }
 
     form label {
@@ -346,6 +346,15 @@ input[type=number] {
         margin: 10px 0px;
         padding: 10px 10px;
         width: 100%;
+    }
+
+    #fullRadioContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .radioContainer {
+        max-width: fit-content;
     }
     
     #bookForm #closeBookButton {
@@ -383,9 +392,10 @@ input[type=number] {
         margin: 0px 10px 0px 0px;
         /* width: 88%;
         height: auto; */
-        height: 150px;
+        height: 50%;
         width: auto;
-        max-width: 150px;
+        max-width: 28%;
+        align-self: center;
     }
     
     #bookList div p {
@@ -399,31 +409,35 @@ input[type=number] {
         flex-direction: column-reverse;
         margin: 0px;
         position: absolute;
-        top: 5px;
+        top: 0px;
         right: 0px;
     }
 
     /* view and delete icons */
     .buttonContainer img {
-        width: 35px;
-        height: 35px;
-        margin: 8px 8px;
+        width: 20px;
+        height: 20px;
+        margin: 5px;
     }
 
     .buttonContainer a {
-        margin: 2px 0px;
+        margin: 4px 12px 5px 5px;
+        /* height: fit-content;
+        width: fit-content; */
+        width: 20px;
+        height: 20px;
     }
     
     /* for viewing in-depth information about a book */
     /* MAJORITY ABSOLUTE VALUES BELOW FOR 412 x 915 */
     #moreInformation {
         padding: 10px;
-        margin-left: 15px;
+        margin-left: 10px;
         /* max-width: 385px; */
         width: 94%;
-        height: 80%;
+        height: 82%;
         position: fixed;
-        top: 12%;
+        top: 9.5%;
         left: 0%;
     }
     
@@ -434,7 +448,8 @@ input[type=number] {
     #viewThumbnail {
         float: left;
         height: 250px;
-        margin-top: 10px;
+        /* margin-top: 10px; */
+        margin: 0px;
     }
     
     /* paragraph for book information */
@@ -443,7 +458,7 @@ input[type=number] {
         margin: auto;
         position: absolute;
         left: 7%;
-        top: 43%;
+        top: 40%;
         /* bottom: 3%; */
         font-size: larger;
     }
