@@ -19,7 +19,7 @@
 <br>
 Desktop: 1920 x 1080
 <br>
-Mobile: 390 x 844 (iPhone 12 in Developer Tools @ 100%)
+Mobile: 390 x 844 (iPhone 12/13 + Pro in Developer Tools @ 100%)
 
 **Note**: CSS may not have desired effects outside of the optimal screen sizes listed above.
 
